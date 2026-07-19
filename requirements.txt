@@ -1,0 +1,7 @@
+# 封面生成（scripts/generate_cover.py）
+openai>=1.0
+
+# 雪球热帖抓取（scripts/xueqiu_hot_posts.py）
+playwright>=1.40
+beautifulsoup4>=4.12
+lxml>=4.9

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(~/.claude/skills/bilibili-finance-video/**)",
+      "WebFetch(domain:developers.openai.com)",
+      "WebFetch(domain:itecsonline.com)"
+    ]
+  }
+}
