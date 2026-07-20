@@ -3,8 +3,8 @@
 用 gpt-image-2 生成财经视频封面（走 B站 LLM 网关）。
 
 用法:
-    python3 generate_cover.py --platform bilibili --prompt "封面画面描述" --output cover_bilibili.png
-    python3 generate_cover.py --platform douyin   --prompt "..."        --output cover_douyin.png
+    python3 generate_cover.py --platform bilibili --prompt "封面画面描述" --output 贵州茅台_bilibili.png
+    python3 generate_cover.py --platform douyin   --prompt "..."        --output 贵州茅台_douyin.png
 
 环境变量:
     LLM_GATEWAY_API_KEY  必填，B站 LLM 网关的 API key。
@@ -23,11 +23,11 @@ BASE_URL = "http://llmapi.bilibili.co/v1"
 MODEL = "gpt-image-2"
 
 # 平台 -> 画幅尺寸。取最接近目标比例的档位：
-#   bilibili 16:9 横版 -> 1536x1024
-#   douyin   9:16 竖版 -> 1024x1536
+#   bilibili 4:3 横版 -> 1024x768
+#   douyin   3:4 竖版 -> 768x1024
 PLATFORM_SIZES = {
-    "bilibili": "1536x1024",
-    "douyin": "1024x1536",
+    "bilibili": "1024x768",
+    "douyin": "768x1024",
 }
 
 
@@ -37,14 +37,14 @@ def main():
         "--platform",
         required=True,
         choices=list(PLATFORM_SIZES.keys()),
-        help="目标平台，决定画幅比例：bilibili=16:9 横版，douyin=9:16 竖版",
+        help="目标平台，决定画幅比例：bilibili=4:3 横版，douyin=3:4 竖版",
     )
     parser.add_argument("--prompt", required=True, help="封面画面描述提示词")
     parser.add_argument("--output", required=True, help="输出文件路径 (.png)")
     parser.add_argument(
         "--size",
         default=None,
-        help="可选，手动指定尺寸如 1536x1024，覆盖平台默认值",
+        help="可选，手动指定尺寸如 1024x768，覆盖平台默认值",
     )
     args = parser.parse_args()
 

@@ -10,11 +10,23 @@
 - 无论哪种排布，公司名字都要**足够大、足够清晰、不被遮挡**，用真实全称或通用简称，不要用代码代替、不要缩写到认不出。
 - 写提示词时，必须显式要求把公司名字写在图上（见下方写法），不能省略。
 
+## 硬规则：公司名字固定统一的位置（系列感）
+
+公司名字在封面里**必须固定放在统一的位置**，每期视频都用同一套排布，让「蛋炒饭财经」长期做下来有稳定的系列感、一眼能认出是同一个账号的内容。约定如下，不要每期换地方：
+
+- **B站版（4:3 横版）**：公司名固定放在**顶部**，作为最醒目的主标题，横贯上方、带一条高亮色衬底或光效。
+- **抖音版（3:4 竖版）**：公司名固定**压在最顶部**一行，横贯画面顶端，是全图最大最清晰的文字。
+- 写提示词时明确指定公司名的这个固定位置（top / pinned across the top），并要求它是全图最突出的文字，不要移到中间或角落。
+
+## 硬规则：封面文件用股票名字命名
+
+生成的封面文件**用股票名字命名**，格式 `<股票名>_bilibili.png` 和 `<股票名>_douyin.png`（如 `贵州茅台_bilibili.png`、`保利物业_douyin.png`），不要用 `cover_bilibili.png` 这类通用名，方便长期归档、一眼区分是哪支票。
+
 ## 两个平台的差异
 
 | | B站 | 抖音 |
 |---|---|---|
-| 比例 | 16:9 横版 | 9:16 竖版 |
+| 比例 | 4:3 横版 | 3:4 竖版 |
 | 文字量 | 可稍多，主标题+副标题 | 极简，一句大字为主 |
 | 构图 | 左右布局，主体+文字分区 | 上下布局，大字压顶或居中 |
 | 观看场景 | 桌面/横屏，看得清细节 | 手机竖屏刷流，要更大更冲 |
@@ -38,25 +50,25 @@ gpt-image-2 对画面描述用英文更稳定，但**需要出现在图上的中
 
 ## 模板示例
 
-**B站版（16:9，看空茅台的选题）：**
+**B站版（4:3，看空茅台的选题）：**
 ```
-A professional YouTube-style financial thumbnail, 16:9 horizontal.
+A professional YouTube-style financial thumbnail, 4:3 horizontal aspect ratio.
 Left side: a dramatic downward red candlestick chart trending down.
 Right side: dark moody background with dramatic lighting, space for text.
+Top area, pinned across the top as the dominant headline with a bright accent bar behind it, large bold Chinese company name: "贵州茅台".
 In the center-right, bold large Chinese text: "茅台还能追吗".
-Below it, clear medium-size Chinese company name: "贵州茅台".
 Bottom smaller Chinese text: "用财报算清楚".
 Color scheme: deep red and dark navy, high contrast, warning tone.
 All Chinese text must be crisp, correctly written and fully readable, not cropped.
 Style: cinematic, high-contrast, bold typography, professional finance channel, eye-catching, 4k.
 ```
 
-**抖音版（9:16，同一选题）：**
+**抖音版（3:4，同一选题）：**
 ```
-A professional vertical thumbnail, 9:16 portrait, for a finance short video.
+A professional vertical thumbnail, 3:4 portrait aspect ratio, for a finance short video.
 Background: dramatic dark red gradient with a falling stock chart and downward arrow.
-Top-center huge bold Chinese text taking up the top third: "茅台别追".
-Directly below, clear bold Chinese company name: "贵州茅台".
+Very top: bold Chinese company name pinned across the top as the dominant headline, the biggest clearest text on the cover: "贵州茅台".
+Upper-center huge bold Chinese text: "茅台别追".
 Center: a large glowing red downward arrow and blurred candlestick chart.
 Color scheme: intense red and black, maximum contrast, urgent emotional tone.
 All Chinese text must be crisp, correctly written and fully readable, not cropped.
@@ -66,11 +78,11 @@ Style: mobile-first, oversized bold typography, punchy, eye-catching, 4k.
 ## 调用脚本
 
 ```bash
-python3 scripts/generate_cover.py --platform bilibili --prompt "上面的英文提示词" --output cover_bilibili.png
-python3 scripts/generate_cover.py --platform douyin  --prompt "上面的英文提示词" --output cover_douyin.png
+python3 scripts/generate_cover.py --platform bilibili --prompt "上面的英文提示词" --output 贵州茅台_bilibili.png
+python3 scripts/generate_cover.py --platform douyin  --prompt "上面的英文提示词" --output 贵州茅台_douyin.png
 ```
 
-`--platform` 会自动选择对应的画幅尺寸（bilibili=1536x1024近似16:9，douyin=1024x1536近似9:16）。
+`--platform` 会自动选择对应的画幅尺寸（bilibili=1024x768，4:3 横版；douyin=768x1024，3:4 竖版）。
 
 ## 提示
 
