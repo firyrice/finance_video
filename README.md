@@ -66,6 +66,7 @@ ln -s "$(pwd)" ~/.codex/skills/bilibili-finance-video
 │   └── cover-prompts.md
 ├── scripts/
 │   ├── generate_cover.py        # gpt-image-2 生成封面（B站/抖音两版）
+│   ├── xueqiu_quote.py          # 抓雪球基础行情（股价/市值/PE/PB/PS）
 │   └── xueqiu_hot_posts.py      # 抓雪球热帖 + 高赞评论
 └── evals/evals.json             # 技能评测用例
 ```
