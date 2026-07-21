@@ -6,9 +6,10 @@
     python3 generate_cover.py --platform bilibili --prompt "封面画面描述" --output 贵州茅台_bilibili.png
     python3 generate_cover.py --platform douyin   --prompt "..."        --output 贵州茅台_douyin.png
 
-环境变量:
-    LLM_GATEWAY_API_KEY  必填，B站 LLM 网关的 API key。
-                         未设置时脚本会报错退出，请先 export LLM_GATEWAY_API_KEY=xxx
+API key 读取顺序:
+    1. 环境变量 LLM_GATEWAY_API_KEY（优先，方便临时覆盖）
+    2. skill 目录下的 .env 文件里的 LLM_GATEWAY_API_KEY=xxx（兜底，免去每次 export）
+    .env 已在 .gitignore 中，不会被提交。
 
 依赖:
     pip install openai
@@ -21,6 +22,27 @@ import sys
 
 BASE_URL = "http://llmapi.bilibili.co/v1"
 MODEL = "gpt-image-2"
+
+
+def _load_api_key():
+    """按优先级读取 API key：环境变量 > skill 目录下的 .env。"""
+    key = os.environ.get("LLM_GATEWAY_API_KEY")
+    if key:
+        return key.strip()
+    # 兜底：读取 skill 根目录（本脚本上一级）下的 .env
+    env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env")
+    try:
+        with open(env_path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                name, _, value = line.partition("=")
+                if name.strip() == "LLM_GATEWAY_API_KEY":
+                    return value.strip().strip('"').strip("'")
+    except FileNotFoundError:
+        pass
+    return None
 
 # 平台 -> 画幅尺寸。取最接近目标比例的档位：
 #   bilibili 4:3 横版 -> 1024x768
@@ -48,11 +70,12 @@ def main():
     )
     args = parser.parse_args()
 
-    api_key = os.environ.get("LLM_GATEWAY_API_KEY")
+    api_key = _load_api_key()
     if not api_key:
         print(
-            "错误：未设置环境变量 LLM_GATEWAY_API_KEY。\n"
-            "请先运行:  export LLM_GATEWAY_API_KEY=你的key  再重试。",
+            "错误：未找到 LLM_GATEWAY_API_KEY。\n"
+            "请二选一：export LLM_GATEWAY_API_KEY=你的key，"
+            "或在 skill 目录下的 .env 里写入 LLM_GATEWAY_API_KEY=你的key。",
             file=sys.stderr,
         )
         return 1
