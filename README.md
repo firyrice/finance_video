@@ -52,6 +52,7 @@ ln -s "$(pwd)" ~/.codex/skills/bilibili-finance-video
 - Python 3.9+，依赖见 `requirements.txt`（`openai`、`playwright`、`beautifulsoup4`、`lxml`）。
 - 雪球抓取脚本需要 Chromium 内核：`playwright install chromium`（或用 `PW_CHROMIUM=/path/to/chrome` 指定已有浏览器）。
 - 封面生成脚本需要 B 站 LLM 网关的 key：`export LLM_GATEWAY_API_KEY=你的key`。
+- 联网搜索脚本需要 qianfan 搜索网关的 key：`export QIANFAN_SEARCH_API_KEY=你的key`（也可写进 skill 目录下的 `.env`，已内置一个可用 key）。`web_search.py` 仅用标准库，无需额外安装。
 
 ## 目录结构
 
@@ -65,6 +66,7 @@ ln -s "$(pwd)" ~/.codex/skills/bilibili-finance-video
 │   ├── title-formulas.md
 │   └── cover-prompts.md
 ├── scripts/
+│   ├── web_search.py            # 联网搜索（走 B站 qianfan 网关，替代自带 WebSearch/WebFetch）
 │   ├── generate_cover.py        # gpt-image-2 生成封面（B站/抖音两版）
 │   ├── xueqiu_quote.py          # 抓雪球基础行情（股价/市值/PE/PB/PS）
 │   └── xueqiu_hot_posts.py      # 抓雪球热帖 + 高赞评论
@@ -73,7 +75,7 @@ ln -s "$(pwd)" ~/.codex/skills/bilibili-finance-video
 
 ## 跨工具兼容说明
 
-`SKILL.md` 里出现的 `WebSearch` / `WebFetch` / `Write` 等是 Claude Code 的工具名。在 Codex 下会自动映射到等价能力（联网搜索、网页读取、文件写入）。脚本均为纯 Python，通过 shell 调用，两个环境通用；调用时用技能目录的**绝对路径**，不要假设当前工作目录就是技能目录（详见 SKILL.md「跨工具适配」一节）。
+**联网搜索走本技能自带的 `scripts/web_search.py`（B站 qianfan 搜索网关），不使用 Claude Code / Codex 自带的 WebSearch / WebFetch**——保证两个环境行为一致、结果可控。`SKILL.md` 里出现的 `Write` 等仍是 Claude Code 的工具名，在 Codex 下会自动映射到等价的文件写入能力。脚本均为纯 Python，通过 shell 调用，两个环境通用；调用时用技能目录的**绝对路径**，不要假设当前工作目录就是技能目录（详见 SKILL.md「跨工具适配」一节）。
 
 ## 免责声明
 
