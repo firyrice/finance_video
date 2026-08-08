@@ -118,6 +118,9 @@ def main():
         with urllib.request.urlopen(url) as resp:
             image_bytes = resp.read()
 
+    out_dir = os.path.dirname(args.output)
+    if out_dir:
+        os.makedirs(out_dir, exist_ok=True)
     with open(args.output, "wb") as f:
         f.write(image_bytes)
 

@@ -1,92 +1,225 @@
-# 封面提示词模板
+# 封面提示词模板（蛋炒饭财经 · 财经垂类 · B站+抖音）
 
-封面是点击率的最大杠杆之一。财经视频封面要在1秒内传达三件事：**讲哪只股票、什么情绪（涨/跌/警示）、一句勾人的大字**。
+封面是点击率的最大杠杆之一。你在设计的不是"一张好看的图"，是**观众在信息流里 0.5 秒扫过时的视线落点和情绪反应**。一句话概括整套逻辑：
 
-## 硬规则：封面必须出现公司名字
+> **用配色说清品类，用一个视觉锤抓住眼睛，用符号和数字预支情绪——大字只负责补上封面故意留的那个缺口，标题从另一个角度接钩子。**
 
-每一张封面（B站版和抖音版都是）**必须清晰地显示公司的具体中文名字**，例如"兆易创新""贵州茅台""保利物业"。观众划到封面第一眼就得知道这条视频讲的是哪家公司，不能只有一句情绪大字却看不出是谁。
+财经视频封面要在1秒内传达三件事：**讲哪只股票、什么情绪（涨/跌/警示）、一句勾人的大字**。三件事缺一不可：只有话题没情绪，封面平淡；只有情绪没话题，观众不知道点进去看什么；只有大字没支撑，就成了孤立噱头。
 
-- 公司名可以是**主标题本身**（比如大字直接写"兆易创新"），也可以作为**副标题/角标**和勾人大字并存（比如大字"闭眼捡钱？"+ 醒目副标"保利物业"）。
-- 无论哪种排布，公司名字都要**足够大、足够清晰、不被遮挡**，用真实全称或通用简称，不要用代码代替、不要缩写到认不出。
-- 写提示词时，必须显式要求把公司名字写在图上（见下方写法），不能省略。
+---
 
-## 硬规则：公司名字固定统一的位置（系列感）
+## 一、账号视觉基因：一次锁定，每期只换文案和主视觉
 
-公司名字在封面里**必须固定放在统一的位置**，每期视频都用同一套排布，让「蛋炒饭财经」长期做下来有稳定的系列感、一眼能认出是同一个账号的内容。约定如下，不要每期换地方：
+一张封面拆成七个维度，分属**两层**，这决定了什么该变、什么绝不能变：
 
-- **B站版（4:3 横版）**：公司名固定放在**顶部**，作为最醒目的主标题，横贯上方、带一条高亮色衬底或光效。
-- **抖音版（3:4 竖版）**：公司名固定**压在最顶部**一行，横贯画面顶端，是全图最大最清晰的文字。
-- 写提示词时明确指定公司名的这个固定位置（top / pinned across the top），并要求它是全图最突出的文字，不要移到中间或角落。
+- **变量层（每期都变）**：**文案 + 主视觉**。跟着这期讲的票和内容走——讲京东方就放面板/财报、讲白酒就放酒瓶，大字写这期最锋利那句判断。本就该期期不同。
+- **审美基因层（一次定稿，长期复用）**：**构图、配色、材质、字体、设计风格**。这是「蛋炒饭财经」的视觉身份，是观众不看清内容就知道"是这个号"的东西。锁死后只小步迭代，绝不每期推倒重来——换基因＝重新培养观众识别习惯，成本极高。
 
-## 硬规则：封面文件用股票名字命名
+### 蛋炒饭财经锁定的设计语言：严肃财经调查风
 
-生成的封面文件**用股票名字命名**，格式 `<股票名>_bilibili.png` 和 `<股票名>_douyin.png`（如 `贵州茅台_bilibili.png`、`保利物业_douyin.png`），不要用 `cover_bilibili.png` 这类通用名，方便长期归档、一眼区分是哪支票。
+不要一个维度一个维度地即兴选颜色选字体（必然互相打架）。**认领一种设计语言，让五个基因维度从它自然长出来**。蛋炒饭财经锁定「严肃财经调查风」，成套基因如下，每期直接复用：
 
-## 两个平台的差异
+- **主色板（锁死）**：墨黑/炭灰打底，暖金作品牌点缀（公司名衬底）。这是账号识别色，不换。
+- **情绪偏移（每期在主色板内调温度旋钮，不换整套色）**：看涨/利好 → 加大暖金、掺红，暖调传底气；看跌/警示 → 压暗、掺警示黄或冷绿，冷调传危机；中性复盘 → 炭灰+金，克制专业。**换的是温度，不是色板。**
+- **字体**：极粗黑体做主锤字，带描边或轻发光；副标用较细的黑体。嗓音是"冲击、敢说"。
+- **材质**：真实物件质感 + 轻颗粒噪点（传"重、真实、调查感"），避免塑料光滑感。
+- **构图骨架（固定）**：见下方系列感一节。
 
-| | B站 | 抖音 |
-|---|---|---|
-| 比例 | 4:3 横版 | 3:4 竖版 |
-| 文字量 | 可稍多，主标题+副标题 | 极简，一句大字为主 |
-| 构图 | 左右布局，主体+文字分区 | 上下布局，大字压顶或居中 |
-| 观看场景 | 桌面/横屏，看得清细节 | 手机竖屏刷流，要更大更冲 |
+出图前自检一句：**这五个基因维度是不是都指向"严肃财经调查"这一种感觉？有没有哪项在唱反调**（比如配了个高饱和卡通字体）？有就是设计语言没锚准，回去对齐，而不是单独修那一项。
 
-同一条视频，两版封面的**大字文案可以不同**：B站可以稍完整，抖音要更短更狠。
+---
 
-## 提示词写法
+## 二、核心原则：画面是「物证」，不是「背景板」
 
-gpt-image-2 对画面描述用英文更稳定，但**需要出现在图上的中文大字，直接在提示词里用中文并明确要求**。一个提示词包含这几块：
+同一支票、文案功力相近的两张封面，点击率能差几十倍，差距几乎全在**画面有没有承载信息**。这是财经封面最被低估、也最能拉开 CTR 的一点。
 
-1. **画面主体**：K线图/上升或下跌箭头/公司logo氛围/人物表情/大额数字
-2. **情绪配色**：
-   - 看涨/利好 → 红色为主（中国市场红涨），暖色、上升箭头
-   - 看跌/警示 → 绿色或暗色 + 警示黄，下跌箭头
-   - 科技股 → 深蓝/黑金、科技感光效
-   - 中性分析 → 稳重的深色 + 金色，专业财经感
-3. **大字标题**：明确写"图中央用醒目大号中文写：'XXXX'"，字数越少越好（4-8字最佳）
-4. **公司名字（必须）**：明确要求图上出现公司中文名，例如"顶部用醒目中文写公司名：'兆易创新'"。可以是主标题，也可以是副标题/角标，但一定要写进提示词、且要求清晰可读。
-5. **风格词**：professional financial thumbnail, high contrast, bold typography, cinematic lighting, eye-catching, 4k
-6. **排版要求**：文字清晰不被遮挡、主体不要太满、留出文字空间
+- **背景板式（低 CTR）**：大字 + 一根通用涨/跌 K 线 + 配色。那根 K 线换成任何一只票都成立，画面零信息增量，只是"财经氛围底图"，全靠文字硬撑。要避免。
+- **物证式（高 CTR）**：画面本身在讲一个"不点开不甘心"的故事，图里有具体物件、具体数字、具体场景，它们本身就是钩子。
 
-## 模板示例
+把画面做成"物证"，靠这四件事：
 
-**B站版（4:3，看空茅台的选题）：**
+1. **一个核心创意意象（视觉双关最佳）**：把这条视频的核心判断，压成一个一眼看懂的具体物件或画面。这就是口播稿手艺层那句「**把判断压成一个能成像的意象**」——文案要用，封面同样要用。
+   - 例：讲五粮液"财务更正/数据大洗澡"，把五粮液**酒瓶做成一瓶涂改液**，一只手拿它涂改财报——一个物件就把"篡改数据"这个抽象指控变成一眼看懂的画面。
+   - 例：讲"套牢"，一只手死死攥住不断下跌的 K 线；讲"抄底"，一只手去接坠落的刀。
+2. **把实锤数据放上封面**：能制造缺口的关键数字直接摆图上。营收 609亿→306亿、净利 215亿→64亿并排，一眼看到"腰斩"，缺口感爆炸。具体数字（-40%、1800亿、100万人）本身就是钩子。
+3. **用真实物件质感替代抽象图表**：公司产品、大楼、印章、人手等真实质感元素，比一根抽象 K 线抓眼，更有故事和记忆点。
+4. **证据链有主次、层层递进**：信息量大不等于乱。排成"大字抛概念 → 副标点破 → 数据/物件给实锤"。例：大字「当什么都能被涂改」→ 副标「五粮液财务大洗澡的真相」→ 财报数据表给实锤。
+
+一句自检：**这张图的画面，换一只票还成立吗？** 成立就是背景板，必须重做成只属于这支票、这个判断的物证。
+
+---
+
+## 三、唯一视觉锤：脸 / 大字数字 / 物件，三选一，绝不并列
+
+封面只能有一个视觉焦点，观众眯眼扫过时第一落点必须唯一。**最常见的业余错误是脸也做大、字也做大，两个主体互相打架，情绪和信息都被稀释。**
+
+- **三选一**：要么一张有戏的脸，要么一个巨大的字/数字，要么一个孤立放大的物件。财经封面多数走后两条（蛋炒饭财经不强依赖露脸）。
+- **主体少而大**，占最抓眼的位置，不堆砌同等重量的元素。
+- **给文字留白**：主体不能铺满画面，刻意留干净区域给大字。留白位置和大字位置一体规划，不是先画满再往缝里塞字。
+- **画面服务文字**：两者冲突时优先保证大字清晰可读。
+
+财经封面情绪锚点常落在**物件/数字**上（无人脸路线是独立成立的正路，不是将就）：一件有张力的物件（涂改液、坠落的刀、攥紧的手）、或一个占屏极大的主锤字/数字本身即主体。此时字体设计、材质感、与底图的融合就是全部功力。
+
+---
+
+## 四、大字文案：三级文字结构 + 4-8字
+
+封面文字不是"排版"，是当**图形**造型。高点击封面普遍是三级结构：
+
+1. **主锤字**：极粗字重、描边或发光，占屏最大。**2-4 字或一个数字/百分比最理想**（如"100万人被套""亏了1800亿""还有救吗"）。
+2. **限定语**：小一号，紧贴主锤字补全语义（主锤"腰斩"下面小字"财务更正后"）。让主锤从一个词变成完整判断，又不抢它的重量。
+3. **英文/副标装饰行**：严肃调查风专用，一行小英文或副标压阵，为质感与厚重感（不为看懂）。非必须。
+
+字数与用词：
+
+- **主锤字理想 4-8 个汉字**（数字/缩写可更短）。短于此立不住一个判断，长于8字在竖屏缩略图里挤成一团。
+- **一句只表达一个判断或一个情绪冲击点**，多层信息拆到主锤字+限定语两级。
+- **用口语，不用书面总结**。读出来要像脱口而出的判断或惊呼，不是论文摘要。
+
+### 情绪放大：符号是最低成本工具
+
+- **`?!` 是高点击高频元素**：`?`=悬念，`!`=震撼，叠起来="又离谱又想不通"。加黄色/高饱和描边。
+- **箭头、圈选、对比色块**：把视线强行拽到关键数字或细节（如财报暴跌处画红色下箭头）。
+- 所有符号服从"唯一视觉锤"——**是给主锤加码的，不能大到变成第二个主体**。
+
+---
+
+## 五、封面与标题分工：两块广告位，不说同一句话
+
+封面大字和标题合起来传达的信息量，必须大于任何一块单独传达的。**不要把标题原样搬到封面再读一遍**——那等于浪费一块广告位。两种成熟模式，动手前选定：
+
+- **模式 A：封面扛全部，标题极简留白**。封面信息做足，标题写得平淡（留白反而勾人）。
+- **模式 B：封面给氛围/物证，标题给钩子**。封面偏主体，把悬念交给标题的问句或省略号。
+
+自查：把标题和封面大字放一起读，如果信息几乎没有增量，就是重复了，改写其中一个。方向也不能打架——**标题看空，封面不能显得看多**（别做标题党，封面制造缺口、视频负责闭合，钩子后面没东西会毁留存和账号信任）。
+
+> 承接旧规则："封面大字承接选定标题"仍成立，但"承接"指**立场和方向一致**，不是逐字照搬。因排版精简字数时只做提炼、不改立场。
+
+---
+
+## 六、配色：品类的制服（在锁定主色板内做情绪偏移）
+
+配色第一功能不是好看，是**品类识别**：观众划到黑金封面自动知道"这是讲钱的"。蛋炒饭财经主色板已锁死（墨黑/炭灰+暖金），每期只在这套色板内做情绪偏移（见第一节），传达这期的具体情绪：
+
+- 看涨/利好 → 暖金加红，暖调、上升箭头
+- 看跌/警示 → 压暗 + 警示黄 / 冷绿，下跌箭头
+- 中性复盘 → 炭灰 + 金，克制专业
+
+**绝不每期推翻主色板重选色**——那摧毁账号识别度。换的是同一套色板里的温度旋钮。
+
+---
+
+## 七、底图质量：清晰、够亮、不抢字
+
+- **清晰**：主视觉边缘利落、不糊不噪。严禁低分辨率截图或压缩过度的网图做底图——糊底图＝观众潜意识判定"内容也不讲究"。
+- **够亮 ≠ 过曝**：真实含义是底图上有干净的、对比度够承载大字的区域。
+- **通用安全策略——文字区永远加一层暗色渐变蒙版**：除非底图本身有大块纯色背景，否则一律给文字区加暗色蒙版。头部账号封面文字底下几乎都有一层压暗处理。这层对观众不可见，但保证大字在任何底图上清晰可读。**写提示词时就把"文字区加暗色渐变蒙层"要求写进去，不要靠运气。**
+
+### 数据可视化克制
+
+封面放图表的唯一目的：**用图表的形状传情绪，不是传具体数据**。缩略图尺度下观众看不清坐标轴和数字。如果去掉图表封面情绪不受影响 → 不要放。不表达情绪的图表＝视觉噪点，只会抢占大字和主体的位置。要放数字就放大、单独描边（见第二节"实锤数据"）。
+
+---
+
+## 八、系列感：固定排布 = 账号识别度
+
+单张好看不够，所有封面放一起要一眼认出是同一个号。蛋炒饭财经固定这些，一次定稿、每期复用：
+
+- **公司名固定位置（硬规则）**：B站版固定放**顶部**、横贯上方带暖金衬底或光效；抖音版固定**压最顶部**一行、横贯顶端、全图最大最清晰的文字。每期同一套排布，不换地方。
+- **构图骨架固定**：B站版"顶部公司名 + 左物证/右大字"；抖音版"顶部公司名 + 中上主锤字 + 中部物证"。骨架不变，内容每期变。
+- 锁的是整套基因（设计语言、主色板、字体家族、材质调性、公司名位置），一次定稿后期期复用，不临时现想。
+
+---
+
+## 九、gpt-image-2 提示词写法
+
+画面描述用英文更稳定，但**要出现在图上的中文大字必须直接用中文写、逐字给**。一条完整提示词包含：
+
+1. **画面主体（英文）**：物证意象、构图、光效氛围。对应第二/三节，明确"唯一视觉锤是什么"。
+2. **图上中文大字（按三级结构逐字给）**：用"图顶部用醒目大号中文写公司名：'京东方'；中央用极粗大字写：'100万人被套'；其下方小一号写：'公司却更赚钱了'"这样的明确指令。需要符号（如 ?!）明确写出位置和颜色。**不能只用英文说"有一句吸引人的标题"，模型猜不出具体汉字。**
+3. **风格词（严肃财经调查风）**：professional financial investigation thumbnail, dark charcoal background, warm gold accent, gritty texture, high contrast, bold heavy typography, cinematic lighting, eye-catching, 4k。
+4. **排版要求**：文字清晰不被遮挡、只保留一个视觉焦点、主体不占满画面、给文字留白、**文字区加暗色渐变蒙层**。
+5. **生成后检查中文**：gpt-image-2 的中文偶尔错别字/缺字/糊字。每张检查图上文字是否正确、清晰，尤其**公司名有没有出现、写对、清晰可读**；错了调提示词重生成，或建议后期设计工具替换文字。**带错字或公司名糊掉的封面不能交付。**
+
+### 关于主视觉素材来源（当前限制）
+
+内核方法论建议：**具名实体**（这家公司的 logo/产品/大楼/具体高管）最好用真实素材走**图生图**，纯文生图会把 logo、产品外形画得"像但不是"，内行一眼看穿。但当前 [scripts/generate_cover.py](../scripts/generate_cover.py) 只支持**纯文生图**（`images.generate`），没有接图生图接口。所以现阶段：
+
+- 主视觉尽量用**泛指意象和抽象概念**（涂改液、坠落的刀、攥紧的手、财报数字），这些纯文生图擅长、且没有"标准答案"可违背。
+- 需要精确公司 logo/产品时，纯文生图易失真——可先出无 logo 版，建议用户后期用设计工具贴真实 logo；或作为未来增强，给脚本加图生图接口喂真实素材图。
+
+---
+
+## 十、缩略图尺度验证（定稿前硬闸）
+
+设计时看大图，观众看的是 3-4cm 宽的指甲盖。定稿前把封面缩到约 3cm 宽（模拟手机信息流），逐项检查，**任一项不过就不能定稿**：
+
+1. **大字可读性**：主锤字还能一眼读出每个字吗？认不全 → 调大字号、加粗、提高对比度。
+2. **情绪可感知**：缩小后画面还能不能传达预期情绪（不靠读字）？不能 → 表情/物证不够大、对比不够强。
+3. **主体可辨认**：唯一视觉锤缩小后还认得出吗？变成模糊色块 → 底图太杂或犯了"两个大元素打架"，简化底图或砍次要主体。
+
+不要相信"大图看着好，缩小应该也行"——大图和小图的视觉感受没有线性关系。这一步是区分专业和业余的关键动作。
+
+---
+
+## 十一、画面主权合规红线（二值不可协商）
+
+与文稿审查里"港澳台不与中国并列、主权表述以官方口径为准"是一对——那条管**文字**，这条管**画面**：
+
+1. **触发 = 任何提及即触发**：文稿只要出现台湾、香港、澳门、新疆、西藏（哪怕只是背景一句），就触发第 2 条。
+2. **涉敏题封面禁止出现**：旗帜、国徽、**任何人物**（不限相关人物，任何人都不放）。导向中性的概念/场景视觉。
+3. **地图全局禁令（所有封面，不限涉敏题）**：一律禁止封面出现地图。AI 生成地图边界不可靠（南海九段线、藏南、台湾着色极易出错），任何题材都是重大事故温床。"世界地图底纹""地图连线"一律作废，改用棋局、连线网络、光影纵深承载"博弈/严肃"调性。
+
+---
+
+## 十二、模板示例（物证式 · 严肃财经调查风）
+
+两个示例都刻意用**物证式画面**（视觉双关意象 + 封面实锤数字），不是一根通用 K 线。照这个思路写：先想"这支票、这个判断，能压成什么具体物件或画面"。
+
+**B站版（4:3，五粮液"财务更正/数据大洗澡"）：**
 ```
-A professional YouTube-style financial thumbnail, 4:3 horizontal aspect ratio.
-Left side: a dramatic downward red candlestick chart trending down.
-Right side: dark moody background with dramatic lighting, space for text.
-Top area, pinned across the top as the dominant headline with a bright accent bar behind it, large bold Chinese company name: "贵州茅台".
-In the center-right, bold large Chinese text: "茅台还能追吗".
-Bottom smaller Chinese text: "用财报算清楚".
-Color scheme: deep red and dark navy, high contrast, warning tone.
-All Chinese text must be crisp, correctly written and fully readable, not cropped.
-Style: cinematic, high-contrast, bold typography, professional finance channel, eye-catching, 4k.
+A professional financial-investigation-style YouTube thumbnail, 4:3 horizontal aspect ratio.
+Central creative visual metaphor: a hand holding a bottle of correction fluid shaped and labeled like a baijiu (Chinese liquor) bottle, painting white over a financial statement — a visual pun for whitewashing the financials.
+Include a small mock financial table with before/after numbers showing a big drop: revenue "609亿 → 306亿", net profit "215亿 → 64亿", with a red downward arrow between them.
+Real-object texture with subtle film grain: correction fluid bottle, corporate building, a red official stamp reading "财务调整" in the corner.
+Top area, pinned across the top as the dominant headline with a warm gold accent bar behind it, large bold Chinese company name: "五粮液".
+Center-left, extra-bold Chinese main text with outline: "当什么都能被涂改".
+Below it, smaller Chinese subtitle: "财务大洗澡的真相".
+Color scheme: dark charcoal background, warm gold and warning-yellow accents, high contrast, investigative tone. Add a dark gradient overlay behind all text areas so the text stays readable.
+Only one visual focal point. All Chinese text and numbers must be crisp, correctly written and fully readable, not cropped.
+Style: cinematic, gritty texture, high-contrast, bold heavy typography, professional finance investigation channel, eye-catching, 4k.
 ```
 
 **抖音版（3:4，同一选题）：**
 ```
-A professional vertical thumbnail, 3:4 portrait aspect ratio, for a finance short video.
-Background: dramatic dark red gradient with a falling stock chart and downward arrow.
-Very top: bold Chinese company name pinned across the top as the dominant headline, the biggest clearest text on the cover: "贵州茅台".
-Upper-center huge bold Chinese text: "茅台别追".
-Center: a large glowing red downward arrow and blurred candlestick chart.
-Color scheme: intense red and black, maximum contrast, urgent emotional tone.
-All Chinese text must be crisp, correctly written and fully readable, not cropped.
-Style: mobile-first, oversized bold typography, punchy, eye-catching, 4k.
+A professional vertical financial-investigation thumbnail, 3:4 portrait aspect ratio, for a finance short video.
+Central creative visual metaphor filling the frame: a hand holding a baijiu-bottle-shaped correction fluid, painting white over a financial report — a visual pun for whitewashing the numbers.
+Overlay one bold before/after figure that screams "腰斩": "215亿 → 64亿" with a large red downward arrow.
+Real-object texture with subtle film grain: correction fluid, a red stamp "财务调整", a blurred corporate building behind.
+Very top: bold Chinese company name pinned across the top as the dominant headline, the biggest clearest text on the cover, with a warm gold accent bar: "五粮液".
+Upper-center huge extra-bold Chinese text with outline: "财务被涂改了".
+Color scheme: dark charcoal background with warm gold and intense warning-yellow, maximum contrast, urgent investigative tone. Add a dark gradient overlay behind all text so it stays readable.
+Only one visual focal point. All Chinese text and numbers must be crisp, correctly written and fully readable, not cropped.
+Style: mobile-first, gritty texture, oversized bold heavy typography, punchy, eye-catching, 4k.
 ```
 
-## 调用脚本
+同一条视频两版**大字文案可以不同**：B站可稍完整，抖音要更短更狠。
+
+---
+
+## 十三、调用脚本
+
+生成的封面**用股票名字命名、放在 `cover/` 目录下**：`cover/<股票名>_bilibili.png`、`cover/<股票名>_douyin.png`（如 `cover/五粮液_bilibili.png`），不要用 `cover_bilibili.png` 这类通用名，方便长期归档区分。脚本会自动创建 `cover/` 目录。
 
 ```bash
-python3 scripts/generate_cover.py --platform bilibili --prompt "上面的英文提示词" --output 贵州茅台_bilibili.png
-python3 scripts/generate_cover.py --platform douyin  --prompt "上面的英文提示词" --output 贵州茅台_douyin.png
+python3 scripts/generate_cover.py --platform bilibili --prompt "上面的英文提示词" --output cover/五粮液_bilibili.png
+python3 scripts/generate_cover.py --platform douyin  --prompt "上面的英文提示词" --output cover/五粮液_douyin.png
 ```
 
-`--platform` 会自动选择对应的画幅尺寸（bilibili=1024x768，4:3 横版；douyin=768x1024，3:4 竖版）。
+`--platform` 自动选画幅（bilibili=1024x768，4:3 横版；douyin=768x1024，3:4 竖版）。
 
-## 提示
+## 十四、迭代提示
 
-- 大字文案要和标题、口播稿观点一致，别封面看空、内容看多。
-- gpt-image-2 生成的中文偶尔会有错别字，生成后**检查图上文字是否正确**，尤其确认**公司名字有出现、写对了、清晰可读**；错了就调整提示词重生成，或建议用户后期用设计工具替换文字。
-- 公司名字上封面是硬要求：如果生成图里公司名缺失或糊掉，必须重生成，不能交付一张看不出讲哪家公司的封面。
-- 一次可以先只生成一版让用户看效果，满意了再生成另一版，省额度。
+- 一次可先只生成一版让用户看效果，满意了再生成另一版，省额度。
+- 封面 CTR 低时别只怀疑标题——先换封面测试。B站支持双封面 A/B 的话充分利用。
+- 有条件就做 2-3 个方案（改大字措辞、改物证意象、改情绪配色），发给几个人在缩略图尺度扫一眼，问"第一眼看到什么、什么情绪、想不想点"，多个人在同一点犹豫就是要改的信号。
