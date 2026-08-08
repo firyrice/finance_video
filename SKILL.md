@@ -11,7 +11,8 @@ description: 专业的B站财经视频创作助手，用于把一支股票变成
 
 本技能同时支持 **Claude Code** 和 **Codex**（以及其它遵循 SKILL.md 规范的 agent）。下文提到具体工具名时，请按你当前所在的运行环境映射到等价能力，不要因为"没有叫这个名字的工具"就跳过步骤：
 
-- **联网搜索/抓取网页**：一律走本技能自带的 `scripts/web_search.py`（B站 qianfan 搜索网关），**不要使用 Claude Code / Codex 自带的 WebSearch / WebFetch**。该脚本一次可并行跑多条查询，返回带标题、链接、来源、日期、摘要和正文全文的结构化 JSON——因为已含正文全文，通常不用再单独抓网页（同时替代了 WebFetch）。下文凡说"搜索""联网查""补一轮搜索"，都指跑这个脚本。若脚本报错拿不到结果（网络/网关波动），如实告知用户无法获取实时数据，不要用记忆里的旧数据冒充。
+- **联网搜索**：一律走本技能自带的 `scripts/web_search.py`（B站 qianfan 搜索网关），**不要使用 Claude Code / Codex 自带的 WebSearch**。该脚本一次可并行跑多条查询，返回带标题、链接、来源、日期、摘要和正文全文的结构化 JSON——因为已含正文全文，通常不用再单独抓网页。若脚本报错拿不到结果（网络/网关波动），如实告知用户无法获取实时数据，不要用记忆里的旧数据冒充。
+- **抓取单个网页（WebFetch 替代）**：当需要精读一篇特定文章（如雪球深度帖、东方财富研报、公司公告页），用 `scripts/web_fetch.py`——它用 Playwright 驱动真实浏览器过 WAF，**不要用 Claude Code / Codex 自带的 WebFetch**（后者对雪球等有 WAF 的站点拿不到正文）。该脚本自动智能推断 referer（雪球/东财等 WAF 站点自动先访问首页拿 cookie），支持 CSS 选择器定位正文区域，返回 `{"title", "text", "status"}` 结构化 JSON。用法见下方示例。如果脚本报错或 WAF 升级导致拿不到，如实告知用户，不要凭记忆编造页面内容。
 - **写文件**：Claude Code 用 `Write` 工具；Codex 直接用其文件写入能力（或 `apply_patch`）。凡说"用 Write 工具写到某文件"，即指"用当前环境的文件写入能力落地该文件"。
 - **跑脚本**：两个环境都通过 shell 执行 `python3`。脚本路径见下方「脚本路径」——一律用技能目录的绝对路径，不要假设当前工作目录就是技能目录。
 
@@ -28,6 +29,7 @@ description: 专业的B站财经视频创作助手，用于把一支股票变成
 SKILL_DIR="$HOME/.claude/skills/bilibili-finance-video"
 [ -d "$SKILL_DIR" ] || SKILL_DIR="$HOME/.codex/skills/bilibili-finance-video"
 python3 "$SKILL_DIR/scripts/web_search.py"       "贵州茅台 最新股价" --out /tmp/web.json
+python3 "$SKILL_DIR/scripts/web_fetch.py"        "https://xueqiu.com/1062170191/404008951" --out /tmp/wf.json
 python3 "$SKILL_DIR/scripts/xueqiu_quote.py"     SH600519 --out /tmp/xq_quote.json
 python3 "$SKILL_DIR/scripts/xueqiu_hot_posts.py" SH600519 --top 12 --out /tmp/xq_hot.json
 ```
@@ -100,9 +102,9 @@ python3 "$SKILL_DIR/scripts/xueqiu_hot_posts.py" SH600519 --top 12 --out /tmp/xq
 - 关键数字自查一遍量级是否合理：用"股价 × 总股本 ≈ 市值""PE × 每股收益 ≈ 股价"等关系交叉验证。雪球接口和搜索结果若对不上，以雪球接口为准并注明。
 - 如果某项数据搜不到或无法确认（雪球接口也没返回），如实标注"未获取到"，宁可不写也不编造——编造的财经数据会直接误导投资决策。
 
-### 联网搜索（用 web_search.py，不用自带 WebSearch/WebFetch）
+### 联网搜索（用 web_search.py，不用自带 WebSearch）
 
-新闻、财报、研报、行业、政策这类**非实时定性信息**，一律用本技能自带的 `scripts/web_search.py` 联网搜集，**不要调用 Claude Code / Codex 自带的 WebSearch / WebFetch**。脚本走 B站 qianfan 搜索网关，一次可并行跑多条查询，返回带标题、链接、来源站点、日期、摘要和**正文全文**的结构化 JSON——因为返回里已含正文全文，通常不用再单独抓网页。
+新闻、财报、研报、行业、政策这类**非实时定性信息**，一律用本技能自带的 `scripts/web_search.py` 联网搜集，**不要调用 Claude Code / Codex 自带的 WebSearch**。脚本走 B站 qianfan 搜索网关，一次可并行跑多条查询，返回带标题、链接、来源站点、日期、摘要和**正文全文**的结构化 JSON——因为返回里已含正文全文，通常不用再单独抓网页。
 
 ```bash
 # 一次多条查询并行发起，最省时间：
@@ -143,7 +145,43 @@ python3 scripts/web_search.py "贵州茅台 雪球 代码" --no-content   # 只�
 
 看 `date` 判断信息新旧（优先用近日的），`content` 是正文全文可直接提炼进文稿，`url`/`website` 用来标注来源。
 
-### 雪球基础行情抓取（股价/市值/PE/PB 的权威来源）
+### 抓取单个网页（用 web_fetch.py，替代自带 WebFetch）
+
+当用户给了一个特定网页链接（雪球深度帖、东方财富研报、公司公告页等），需要精读那一篇的全文时，用 `scripts/web_fetch.py`，**不要用 Claude Code / Codex 自带的 WebFetch**——后者对雪球、东财等有阿里云 WAF 的站点拿不到正文，只会返回 JS 挑战码。
+
+```bash
+# 基本用法（自动智能设置 referer）
+python3 scripts/web_fetch.py "https://xueqiu.com/1062170191/404008951" --out /tmp/wf.json
+
+# 指定正文 CSS 选择器、延长等待时间（JS 渲染重的页面）
+python3 scripts/web_fetch.py "https://finance.sina.com.cn/..." --selector "article" --wait 8 --out /tmp/wf.json
+
+# 手动指定 referer（自动推断不准确时）
+python3 scripts/web_fetch.py "https://xueqiu.com/xxx/yyy" --referer "https://xueqiu.com" --out /tmp/wf.json
+
+# 只打 stdout、不写文件
+python3 scripts/web_fetch.py "https://xueqiu.com/1062170191/404008951"
+```
+
+- **原理**：Playwright 驱动真实 Chromium 过 WAF，与 `xueqiu_hot_posts.py` 共用同一套浏览器查找逻辑和反检测脚本。首次运行要过 WAF 挑战，比 curl 慢几秒，但能拿到真实正文。
+- **智能 referer**：脚本对雪球、东财等已知 WAF 站点自动先访问首页拿合法 cookie，再抓目标页，无需手动 `--referer`。
+- **自动正文探测**：不指定 `--selector` 时，脚本按常见财经站点模板（雪球 `article`、新浪 `.article-content`、公众号 `.rich_media_content` 等）依次尝试，取第一个有内容的容器。
+- **参数**：`--selector` CSS 选择器，`--wait` 加载等待秒数（默认 5），`--referer` 手动指定 referer 页，`--out` 输出文件路径，`--show` 显示浏览器窗口调试。
+- 依赖与 `xueqiu_hot_posts.py` 完全相同（`playwright` + `beautifulsoup4` + `lxml` + 已缓存的 Chromium），无需额外安装。
+- 若脚本报错或 WAF 升级拿不到内容，如实告知用户，不要凭记忆编造页面内容。
+
+**输出结构**：
+
+```json
+{
+  "url": "https://xueqiu.com/1062170191/404008951",
+  "title": "5800字拆解宇树科技，那些招股书没讲的事儿",
+  "text": "正文全文(已清洗为纯文本) ...",
+  "text_length": 6611,
+  "fetched_at": "2026-08-08 15:20:00",
+  "status": "ok"
+}
+```
 
 股价、市值、估值这类实时数字，搜索结果和训练记忆都不可靠，**必须以雪球行情接口为准**。跑这个脚本一次性拿到干净的结构化基础数据：
 
@@ -159,7 +197,7 @@ python3 scripts/xueqiu_quote.py SZ300750 SH600519 HK03690 BABA --out /tmp/xq_quo
 - 脚本同样用 Playwright 过阿里云 WAF 拿匿名 token，**首次运行较慢属正常**；拿到 token 后多个代码依次抓取，很快。
 - 若报「未拿到 xq_a_token」或抓取失败，多半是网络/风控波动，隔几十秒重试；实在拿不到就退回用 `web_search.py` 交叉核对，并在稿子里对存疑数字保持谨慎。
 
-**输出结构**（每只票一条，字段已归一，直接喂给自己写稿）：
+**输出结构**（每只股票一条，字段已归一，直接喂给自己写稿）：
 
 ```json
 {
@@ -190,7 +228,7 @@ python3 scripts/xueqiu_quote.py SZ300750 SH600519 HK03690 BABA --out /tmp/xq_quo
 
 ### 雪球热帖抓取（一手散户情绪与观点）
 
-`web_search.py` 抓的是新闻和研报，拿不到散户在讨论什么。雪球评论区的热帖是**发现选题、找争议钩子、判断多空分歧**的一手素材——哪条帖子几百回复、评论区在吵什么，往往就是这只票当下最真实的情绪焦点。**每次抓数据时，和 `web_search.py` 并行跑一次这个脚本。**
+`web_search.py` 抓的是新闻和研报，拿不到散户在讨论什么。雪球评论区的热帖是**发现选题、找争议钩子、判断多空分歧**的一手素材——哪条帖子几百回复、评论区在吵什么，往往就是这只股票当下最真实的情绪焦点。**每次抓数据时，和 `web_search.py` 并行跑一次这个脚本。**
 
 ```bash
 python3 scripts/xueqiu_hot_posts.py <雪球代码> --top 12 --comments 25 --out /tmp/xq_hot.json
@@ -284,7 +322,7 @@ python3 scripts/xueqiu_hot_posts.py <雪球代码> --top 12 --comments 25 --out 
 
 封面的设计基因已锁定为「严肃财经调查风」（墨黑/炭灰+暖金主色板、极粗黑体、真实物件+颗粒质感），每期只换**文案和主视觉**，配色/字体/材质/构图长期复用以积累账号识别度——不要每期即兴换审美。写提示词前先定这期的情绪偏移（看涨→暖金加红/看跌→压暗加警示黄/中性→炭灰加金，都在主色板内调温度，不换色板）和主视觉。**阅读 `references/cover-prompts.md` 获取完整方法论与提示词模板**（设计基因、物证原则、唯一视觉锤、三级文字、缩略图验证、主权红线、写法模板）。
 
-**定主体时先想画面里的"物证"，而不是随手放一根 K 线**。封面画面本身要携带信息：把这条视频的核心判断压成一个能成像的具体意象（视觉双关最佳），再把能制造缺口的实锤数字/真实物件放上图。一根通用的涨跌 K 线换成任何一只票都成立，是"背景板"，点击率最差。自检一句："这张图的画面换一只票还成立吗？"成立就重做。详见 cover-prompts.md 的「画面是物证，不是背景板」。
+**定主体时先想画面里的"物证"，而不是随手放一根 K 线**。封面画面本身要携带信息：把这条视频的核心判断压成一个能成像的具体意象（视觉双关最佳），再把能制造缺口的实锤数字/真实物件放上图。一根通用的涨跌 K 线换成任何一只股票都成立，是"背景板"，点击率最差。自检一句："这张图的画面换一只股票还成立吗？"成立就重做。详见 cover-prompts.md 的「画面是物证，不是背景板」。
 
 调用 `scripts/generate_cover.py` 来生成。用法：
 
@@ -318,7 +356,7 @@ python3 scripts/generate_cover.py \
 
 阶段二和阶段三的所有产出**汇总写进同一个 Markdown 文档文件**，放在 `docs/` 目录下（例如用 Write 工具写到 `docs/<股票名>_财经视频文案.md`），让用户一次性复制粘贴、方便存档。不要把口播稿、标题、封面、评估拆成好几条对话消息发出去。
 
-**硬规则：写文档前先查重名，重名就另起新文件，绝不覆盖**。用户经常同时开两个任务并行跑文稿和选题，同一只票、甚至不同选题方向都可能撞到同一个默认文件名。落地前先看 `docs/` 下目标文件名是否已存在（用 Read/搜索确认）：
+**硬规则：写文档前先查重名，重名就另起新文件，绝不覆盖**。用户经常同时开两个任务并行跑文稿和选题，同一只股票、甚至不同选题方向都可能撞到同一个默认文件名。落地前先看 `docs/` 下目标文件名是否已存在（用 Read/搜索确认）：
 - 目标文件**不存在** → 直接用 `docs/<股票名>_财经视频文案.md`。
 - 目标文件**已存在**（是别的任务或上一版的产物）→ **不要覆盖**，改用带区分度的新名字，如 `docs/<股票名>_<选题方向简称>_财经视频文案.md`，或退而加序号 `docs/<股票名>_财经视频文案_2.md`。选题方向简称优先，比纯序号更能一眼看出是哪条。
 - 同理，阶段三的封面文件（`cover/<股票名>_bilibili.png` 等）若已存在其他任务的成图，也按同样逻辑加选题方向简称或序号区分，别互相覆盖。
@@ -391,7 +429,7 @@ python3 scripts/generate_cover.py \
 - 亮**个人倾向性观点**，但落在"我怎么看这门生意/这个估值"，不落在"你该在几块买/卖"。
 - 谈价格区间时只做**客观描述**（"历史上这个 PB 分位在什么位置""前期平台在哪"），不转成"所以你在这里买/卖"的指令。
 
-一句话把握：**帮观众看懂一支票值不值、变量在哪，是内容；替观众决定买不买、买在几块，是荐股。** 我们只做前者。
+一句话把握：**帮观众看懂一支股票值不值、变量在哪，是内容；替观众决定买不买、买在几块，是荐股。** 我们只做前者。
 
 ## 快速参考
 
@@ -400,7 +438,8 @@ python3 scripts/generate_cover.py \
 - `references/script-review.md` — 独立终审模块（起子 agent 三层对抗性终审：硬门禁含财经数据红线+荐股红线+内容合规红线 / 受众复审 / 事实立场关）
 - `references/title-formulas.md` — 爆款标题公式与范例
 - `references/cover-prompts.md` — 封面提示词模板（B站/抖音）
-- `scripts/web_search.py` — 联网搜索(走 B站 qianfan 网关)，替代自带 WebSearch/WebFetch，抓新闻/财报/研报/政策
+- `scripts/web_search.py` — 联网搜索(走 B站 qianfan 网关)，替代自带 WebSearch，抓新闻/财报/研报/政策
+- `scripts/web_fetch.py` — 抓取单个网页正文全文(Playwright 过 WAF)，替代自带 WebFetch，精读雪球/东财等受保护页面
 - `scripts/generate_cover.py` — 调用 gpt-image-2 生成封面
 - `scripts/xueqiu_quote.py` — 抓雪球基础行情(股价/市值/PE/PB/PS/股息率等)，股价类基础数据的权威来源
 - `scripts/xueqiu_hot_posts.py` — 抓雪球热帖(含正文全文+高赞评论)，散户情绪与观点的一手素材
