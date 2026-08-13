@@ -311,6 +311,8 @@ python3 scripts/xueqiu_hot_posts.py <雪球代码> --top 12 --comments 25 --out 
 
 口播稿、3个候选标题、终审 PASS 判决都写进统一文档后，**停下来**，用一句话邀请用户确认，例如："文稿和 3 个标题都在文档里了，你定一下最终用哪个标题（或说要改哪里），定了我再按这个标题去生成 B站和抖音封面。"
 
+**若用户改选了另一个标题、或让你改写标题，必须同步回改文稿开头 hook，让开头兑现新标题**（铁律，见「2. 标题」）——标题和开头永远绑定，只改标题不动开头会让开头对不上标题、3s/5s 完播率崩。改完再进封面阶段。
+
 不要在标题确认前就抢跑生成封面——封面大字要用的就是这个最终标题，标题没定，封面必然要返工。
 
 ## 阶段三：封面（标题定稿后才做）
@@ -435,7 +437,8 @@ python3 scripts/generate_cover.py \
 
 - `references/topic-selection.md` — 选题方法论（好问题三问 + 恐惧/愤怒/希望动机 + 比较优势 + 可轮换选题池 + 准入自检）
 - `references/script-structure.md` — 口播稿方法论（情绪弧线 + 留存单元 + 手艺层四样 + 信息增量/参照物/信源 + 零标注交付）
-- `references/script-review.md` — 独立终审模块（起子 agent 三层对抗性终审：硬门禁含财经数据红线+荐股红线+内容合规红线 / 受众复审 / 事实立场关）
+- `references/script-review.md` — 独立终审模块（起子 agent 三层对抗性终审：硬门禁含财经数据红线+荐股红线+内容合规红线+AI 味句式扫描 / 受众复审 / 事实立场关）
+- `references/banned-words.md` — AI 味词表（套话/宣传腔大词/软起手式/堆砌副词/"不是而是"三毒），管机器腔，与合规红线两张网并行，终审逐句扫
 - `references/title-formulas.md` — 爆款标题公式与范例
 - `references/cover-prompts.md` — 封面提示词模板（B站/抖音）
 - `scripts/web_search.py` — 联网搜索(走 B站 qianfan 网关)，替代自带 WebSearch，抓新闻/财报/研报/政策
