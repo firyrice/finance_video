@@ -11,7 +11,7 @@
     python3 ingest_metrics.py --video "五粮液利润翻倍，散户全在骂修改液" \
         ~/Desktop/稿件数据示例（五粮液）-1.xlsx ~/Desktop/稿件数据示例（五粮液）-2.xlsx
 
-    # 账号级：写进 workspace/账号数据.md
+    # 账号级：写进 workspace/账号数据/账号数据.md
     python3 ingest_metrics.py --account ~/Desktop/账号数据示例.xlsx
 
     # 只预览不写文件
@@ -143,8 +143,8 @@ def main():
     if args.account:
         level = "account"
         title = "账号数据"
-        out_dir = WORKSPACE
-        out_md = os.path.join(WORKSPACE, "账号数据.md")
+        out_dir = os.path.join(WORKSPACE, "账号数据")
+        out_md = os.path.join(out_dir, "账号数据.md")
     else:
         level = "video"
         title = args.video
