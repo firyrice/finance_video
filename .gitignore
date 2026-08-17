@@ -21,3 +21,7 @@ cover_*.png
 # 密钥类，双保险
 .env
 *.key
+
+# 抖音创作者后台会话 cookie（私有，切勿入库）
+.douyin_cookie
+douyin_raw_*.json
