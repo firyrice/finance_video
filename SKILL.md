@@ -474,8 +474,8 @@ python3 scripts/generate_cover.py \
 workspace/
 ├── huasheng.md            # 账号级 Memory：平台/人设/画像/品类/固定话术/封面基因/合规红线。开工前先读它对齐人设。
 ├── 账号数据/              # 账号级每日数据（持续更新），结构同视频文件夹
-│   ├── 账号数据.md         # 每日数据汇总（投稿量/播放/完播率/封面点击率等）
-│   └── raw/               # 账号级原始 xlsx 归档
+│   ├── 账号数据.md         # 每日数据汇总（投稿量/播放/完播率/封面点击率等，自动抓取）
+│   └── raw/               # 账号级原始 JSON 归档（douyin_account_raw_*.json）
 ├── reports/               # 分析报告（账号/稿件复盘）；写法见 reports/README.md
 └── <创建日期>_<最终标题>/  # 每支视频一个文件夹，用「创建日期_最终标题」命名（日期 YYYY-MM-DD，取自建文件夹当天）
     ├── 视频基础信息.md     # 元信息头 + 口播稿 + 标题候选 + 终审记录 + 封面
@@ -512,6 +512,10 @@ workspace/
 
 （以下接阶段二/三产出：一、口播稿　二、标题　三、终审记录　四、封面）
 ```
+
+**更新账号级数据（自动抓取）**：用户说"更新账号数据""刷新账号数据"等，直接跑
+`python3 scripts/douyin_account.py --save-raw`
+脚本用 Playwright 注入会话 cookie 打开创作者数据中心页，在页面 JS 环境里 fetch 两个 `janus/creator/data/overview/dashboard` 接口（`recent_days=30`，默认 30 天，`--days` 可改），把账号级每日数据（投稿量/播放/点赞/评论/分享/净增粉/新增粉/取关粉/回访粉/主页访问/封面点击率/5s完播率/2s跳出率/平均播放时长/总粉丝量）写进 `账号数据/账号数据.md`，原始 JSON 归档 `账号数据/raw/`。产出：核心指标总览（近 N 天聚合）+ 三个逐日趋势表（每日互动/每日粉丝/每日质量）。cookie 同 `.douyin_cookie`，过期报错就重导。
 
 **发布后追踪数据（首选：自动抓取）**：视频发到抖音后，用户给出创作者后台的作品详情页链接（形如 `https://creator.douyin.com/creator-micro/work-management/work-detail/<item_id>`），直接跑
 `python3 scripts/douyin_metrics.py --url "<作品详情页链接>" --video "<创建日期>_<最终标题>" --save-raw`
@@ -581,7 +585,8 @@ workspace/
 - `scripts/xueqiu_hot_stocks.py` — 抓雪球全市场热榜(人气热股/涨幅/跌幅/成交额四榜)，供阶段零选题发现反推"今天全市场哪些票在热/在被套"。单榜失败优雅降级，全挂就退回 web_search 兜底
 - `scripts/xueqiu_quote.py` — 抓雪球基础行情(股价/市值/PE/PB/PS/股息率等)，股价类基础数据的权威来源
 - `scripts/xueqiu_hot_posts.py` — 抓雪球热帖(含正文全文+高赞评论)，散户情绪与观点的一手素材。**务必派子 agent 抓+消化、只回传摘要**，别由主 agent 直接读原始 JSON（几万字会撑爆上下文，做法见「雪球热帖抓取」）
-- `scripts/douyin_metrics.py` — **首选**。给一条抖音创作者后台作品详情页链接（`--url`）+ 视频文件夹名（`--video`），自动注入 cookie 并点开「流量分析」「评论管理」tab，抓后台签名接口，把六个小节（核心指标/近期对标/逐小时趋势/流量来源/进度分析/高赞评论Top20）写进 workspace 下的 `数据.md`（cookie 存 `.douyin_cookie`，过期需重导）
+- `scripts/douyin_account.py` — 账号级数据自动抓取。注入 cookie 打开创作者数据中心页，fetch 两个 janus 概览接口（默认 `recent_days=30`），把账号每日数据写进 `账号数据/账号数据.md`（cookie 存 `.douyin_cookie`，过期需重导）。触发语："更新账号数据""刷新账号数据"
+- `scripts/douyin_metrics.py` — **首选（稿件级）**。给一条抖音创作者后台作品详情页链接（`--url`）+ 视频文件夹名（`--video`），自动注入 cookie 并点开「流量分析」「评论管理」tab，抓后台签名接口，把六个小节（核心指标/近期对标/逐小时趋势/流量来源/进度分析/高赞评论Top20）写进 workspace 下的 `数据.md`（cookie 存 `.douyin_cookie`，过期需重导）
 - `scripts/ingest_metrics.py` — 备选。把抖音后台手动导出的发布数据 xlsx 归纳成 workspace 下的 `数据.md`，并归档原件
 - `workspace/huasheng.md` — 账号级 Memory（人设/画像/品类/固定话术/封面基因/合规红线），开工前先读
 - `workspace/reports/` — 账号与稿件的分析复盘报告目录（写法见其 README.md）
