@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """
-抓取雪球指定股票的「热帖」，加载每条热帖的正文全文 + 高赞评论，
-清洗成精简的结构化 JSON，供 LLM 做选题/写稿参考。
+抓取雪球指定股票「热帖」tab 里【最近一个月内】的【前 5 条帖子】，
+每条帖子再取【前 5 条高赞评论】，加载正文全文后清洗成精简的结构化 JSON，
+既供 LLM 做选题参考，也供写稿时引用帖子/评论里的真实观点（提升稿件质量、减少 AI 感）。
+
+默认口径 = 热帖 + 近 30 天 + top 5 帖 + 每帖 5 条高赞评论，与网页「热帖」tab 对齐。
 
 用法:
-    python3 xueqiu_hot_posts.py SH600585
-    python3 xueqiu_hot_posts.py HK03690 --top 12 --comments 30 --out meituan.json
+    python3 xueqiu_hot_posts.py SH600585                      # 默认：热帖近30天前5条，每帖5条评论
+    python3 xueqiu_hot_posts.py HK01952 --out yunding.json    # 云顶新耀
+    python3 xueqiu_hot_posts.py HK03690 --top 8 --comments 8 --days 60
     python3 xueqiu_hot_posts.py SZ000858 --sort new --no-comments
 
 原理:
@@ -137,13 +141,22 @@ def page_fetch_json(pg, url):
 # --------------------------------------------------------------------------- #
 #  数据抓取
 # --------------------------------------------------------------------------- #
-def fetch_hot_list(pg, symbol, top, sort):
-    """翻页拉取热帖列表, 直到累计 top 条 (去重)。"""
+def fetch_hot_list(pg, symbol, top, sort, days=None, max_scan_pages=15):
+    """翻页拉取热帖列表, 收集前 top 条 (去重)。
+
+    days 不为空时, 只保留【最近 days 天内】发布的帖子。热帖是按热度(而非时间)
+    排序的, 列表里会混着更早的帖子, 因此不能靠时间提前收敛——按热度顺序逐条过
+    时间窗, 攒够 top 条即停; 最多扫 max_scan_pages 页避免符合条件的太少时翻不完。
+    """
     sym = api_symbol(symbol)
+    cutoff = None
+    if days:
+        cutoff = time.time() * 1000 - days * 86400 * 1000
     items, seen = [], set()
     total = None
+    scanned = 0  # 已扫描(未过滤)的帖子数, 供日志观察命中率
     page = 1
-    while len(items) < top:
+    while len(items) < top and page <= max_scan_pages:
         url = (f"{LIST_API}?symbol={sym}&count={PAGE_SIZE}&source=all"
                f"&sort={sort}&page={page}&type=11&comment=0&hl=0")
         status, body, raw = page_fetch_json(pg, url)
@@ -161,8 +174,14 @@ def fetch_hot_list(pg, symbol, top, sort):
             if pid in seen:
                 continue
             seen.add(pid)
+            scanned += 1
+            if cutoff and (it.get("created_at") or 0) < cutoff:
+                continue  # 超出近 days 天时间窗, 跳过
             items.append(it)
-        print(f"[list] page {page}: 累计 {len(items)} 条 (服务端共 {total})",
+            if len(items) >= top:
+                break
+        win = f"(近{days}天命中 {len(items)}/{scanned} 扫描)" if days else ""
+        print(f"[list] page {page}: 累计 {len(items)} 条 {win}(服务端共 {total})",
               file=sys.stderr)
         if page >= max_page:
             break
@@ -248,7 +267,7 @@ def struct_post(detail: dict, list_item: dict, comments: list) -> dict:
 # --------------------------------------------------------------------------- #
 #  主流程
 # --------------------------------------------------------------------------- #
-def scrape(symbol, top, sort, n_comments, with_comments, headless=True):
+def scrape(symbol, top, sort, n_comments, with_comments, days=None, headless=True):
     exe = find_chromium()
     launch_kwargs = {
         "headless": headless,
@@ -314,10 +333,12 @@ def scrape(symbol, top, sort, n_comments, with_comments, headless=True):
 def main():
     ap = argparse.ArgumentParser(
         description="抓取雪球股票热帖(含正文全文+高赞评论), 输出精简结构化 JSON")
-    ap.add_argument("symbol", help="股票代码: A股 SH600585/SZ000858, 港股 HK03690, 美股 BABA")
-    ap.add_argument("--top", type=int, default=12, help="抓取热帖条数 (默认 12)")
-    ap.add_argument("--comments", type=int, default=25,
-                    help="每条帖子加载的评论条数 (默认 25)")
+    ap.add_argument("symbol", help="股票代码: A股 SH600585/SZ000858, 港股 HK01952, 美股 BABA")
+    ap.add_argument("--top", type=int, default=5, help="抓取热帖条数 (默认 5, 对齐热帖tab前5条)")
+    ap.add_argument("--comments", type=int, default=5,
+                    help="每条帖子加载的高赞评论条数 (默认 5)")
+    ap.add_argument("--days", type=int, default=30,
+                    help="只取最近多少天内的帖子 (默认 30; 传 0 表示不限时间)")
     ap.add_argument("--no-comments", action="store_true", help="不加载评论区")
     ap.add_argument("--sort", default="hot",
                     help="hot=热帖(默认) / new=新帖")
@@ -326,12 +347,15 @@ def main():
     args = ap.parse_args()
 
     sort = SORT_MAP.get(args.sort, args.sort)
+    days = args.days if args.days and args.days > 0 else None
     posts = scrape(args.symbol, args.top, sort, args.comments,
-                   with_comments=not args.no_comments, headless=not args.show)
+                   with_comments=not args.no_comments, days=days,
+                   headless=not args.show)
 
     result = {
         "symbol": args.symbol.upper(),
         "sort": "热帖" if sort == "alpha" else "新帖",
+        "window_days": days,
         "fetched_at": time.strftime("%Y-%m-%d %H:%M:%S"),
         "count": len(posts),
         "posts": posts,
