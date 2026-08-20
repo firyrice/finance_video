@@ -25,3 +25,15 @@ cover_*.png
 # 抖音创作者后台会话 cookie（私有，切勿入库）
 .douyin_cookie
 douyin_raw_*.json
+
+# B站创作者后台会话 cookie（私有，切勿入库）
+.bilibili_cookie
+bilibili_raw_*.json
+
+# 小红书创作者后台会话 cookie（私有，切勿入库）
+.xiaohongshu_cookie
+xiaohongshu_raw_*.json
+
+# 视频号（Channels）创作者后台会话 cookie（私有，切勿入库）
+.channels_cookie
+channels_raw_*.json

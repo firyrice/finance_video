@@ -144,7 +144,7 @@ def main():
         level = "account"
         title = "账号数据"
         out_dir = os.path.join(WORKSPACE, "账号数据")
-        out_md = os.path.join(out_dir, "账号数据.md")
+        out_md = os.path.join(out_dir, "抖音.md")
     else:
         level = "video"
         title = args.video

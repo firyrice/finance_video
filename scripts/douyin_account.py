@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-抖音创作者后台「账号数据中心」自动抓取 → 落盘到 workspace/账号数据/账号数据.md。
+抖音创作者后台「账号数据中心」自动抓取 → 落盘到 workspace/账号数据/抖音.md。
 
 原理：
     数据中心（data-center/operation）是 SPA，账号级数字来自登录态签名接口
@@ -46,7 +46,7 @@ from douyin_metrics import find_chromium, parse_cookies, COOKIE_FILE  # noqa: E4
 
 SKILL_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ACCOUNT_DIR = os.path.join(SKILL_DIR, "workspace", "账号数据")
-OUT_MD = os.path.join(ACCOUNT_DIR, "账号数据.md")
+OUT_MD = os.path.join(ACCOUNT_DIR, "抖音.md")
 
 URL = "https://creator.douyin.com/creator-micro/data-center/operation"
 API_BASE = "https://creator.douyin.com/janus/douyin/creator/data/overview/"
@@ -242,7 +242,7 @@ def build_markdown(data, days):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="抖音创作者数据中心账号数据 → workspace/账号数据/账号数据.md")
+    ap = argparse.ArgumentParser(description="抖音创作者数据中心账号数据 → workspace/账号数据/抖音.md")
     ap.add_argument("--days", type=int, default=30, help="抓最近多少天（默认 30）")
     ap.add_argument("--show", action="store_true", help="显示浏览器窗口（调试）")
     ap.add_argument("--wait", type=int, default=8, help="页面加载后等待秒数（默认 8）")
