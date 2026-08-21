@@ -21,7 +21,7 @@ SKILL_DIR="$HOME/.claude/skills/bilibili-finance-video"
 [ -d "$SKILL_DIR" ] || SKILL_DIR="$HOME/.codex/skills/bilibili-finance-video"
 ```
 
-下文示例为简洁写成 `scripts/xxx.py`，实际调用替换为 `"$SKILL_DIR/scripts/xxx.py"`。**五个采集脚本（web_search / web_fetch / xueqiu_quote / xueqiu_hot_posts / xueqiu_hot_stocks）的完整用法、参数、JSON 输出结构见 [references/data-fetching.md](references/data-fetching.md)**；发布后八个数据脚本见 [references/data-tracking.md](references/data-tracking.md)。
+下文示例为简洁写成 `scripts/xxx.py`，实际调用替换为 `"$SKILL_DIR/scripts/xxx.py"`。**五个采集脚本（web_search / web_fetch / xueqiu_quote / xueqiu_hot_posts / xueqiu_hot_stocks）的完整用法、参数、JSON 输出结构见 [references/data-fetching.md](references/data-fetching.md)**；**视频发布【之后】的多平台数据抓取（抖音/小红书/B站/视频号 账号级+稿件级）是一条独立工作流，已拆分到 `danchaofan-data-tracker` 技能——见下方「发布后数据抓取」小节。**
 
 ## 专业分析框架（贯穿选题与文稿）
 
@@ -289,24 +289,13 @@ workspace/
 
 **硬规则：文件夹名带创建日期前缀 + 同名即新建绝不覆盖**。`<创建日期>` 先跑 `date +%F` 取当天，别凭记忆写。用户经常并行跑两个任务，落地前先看 `workspace/` 下目标文件夹是否已存在：不存在直接用；已存在（别的任务或上一版产物）就**不要覆盖**，改用带区分度的新名（如 `..._最终标题（选题方向简称）/`，或退而加序号）。宁可文件夹多一个，也不要两个并行任务把对方成果冲掉。
 
-### 发布后数据抓取（触发语速查表）
+### 发布后数据抓取（已拆分到独立技能）
 
-发布后各平台数据是一条独立工作流，**完整脚本用法、接口字段、cookie、更新范围规则都在 [references/data-tracking.md](references/data-tracking.md)**。速查：
+视频**发布之后**的多平台数据抓取（抖音/小红书/B站/视频号，账号级+稿件级）是一条独立于创作的工作流，**已拆分到 `danchaofan-data-tracker` 技能**——脚本和 cookie 都在那边，但数据仍写回本技能的 `workspace/`（各视频 `数据/<平台>_数据.md`、`账号数据/<平台>.md`）。用户说"更新数据""更新账号数据""更新B站账号数据""更新视频号数据"，或给出创作者后台数据页链接（抖音 work-detail / 小红书 note-detail / B站 upload-manager）时，走那个技能，不在本技能里跑。
 
-| 触发语 | 脚本 | 落盘 |
-|---|---|---|
-| 给一条抖音作品详情页链接 / "更新数据" | `douyin_metrics.py --url ... --video ...` | 该视频 `数据/抖音_数据.md` |
-| "更新账号数据" | `douyin_account.py` | `账号数据/抖音.md` |
-| 给一条小红书笔记数据页链接（含 noteId） | `xiaohongshu_metrics.py --url ... --video ...` | 该视频 `数据/小红书_数据.md` |
-| "更新小红书账号数据" | `xiaohongshu_account.py` | `账号数据/小红书.md` |
-| 给一条 B站稿件数据页链接（含 BV） | `bilibili_metrics.py --url ... --video ...` | 该视频 `数据/B站_数据.md` |
-| "更新B站账号数据" | `bilibili_account.py` | `账号数据/账号数据_B站.md` |
-| "更新视频号数据"（账号级） | `channels_metrics.py` | `账号数据/视频号.md` |
-| 点名某支视频的视频号数据（稿件级） | `channels_metrics.py --video ...` | 该视频 `数据/视频号_数据.md` |
+**发布后必做（本技能负责的部分）**：视频发到某平台后，用户给出该平台创作者后台数据页链接时，**第一件事就是把它回填进该视频 `视频基础信息.md` 的 `创作后台链接（各平台）` 块对应平台行**——这是 `danchaofan-data-tracker` 后续「更新数据」读 `--url` 的入口，别只用完就丢。
 
-**发布后必做**：视频发到某平台后，用户给出该平台创作者后台数据页链接时，**第一件事就是把它回填进该视频 `视频基础信息.md` 的 `创作后台链接（各平台）` 块对应平台行**——这是后续「更新数据」的入口，别只用完就丢。「更新数据」范围规则（点名哪支就只更新哪支 / "全部"才遍历 / 未指平台先确认平台）见 data-tracking.md，别自作主张扩大或缩小范围。
-
-**分析复盘**：分析"某视频为啥流量高但吸粉差""为啥被限流"这类问题时，读相关账号级/稿件级数据文件，报告写进 `workspace/reports/`（`YYYY-MM-DD_主题.md`），并把稳定规律回写到 `huasheng.md` 驱动后续迭代。
+**分析复盘**：分析"某视频为啥流量高但吸粉差""为啥被限流"这类问题时，读相关账号级/稿件级数据文件（由 `danchaofan-data-tracker` 抓好落在 `workspace/` 下），报告写进 `workspace/reports/`（`YYYY-MM-DD_主题.md`），并把稳定规律回写到 `huasheng.md` 驱动后续迭代。
 
 ## 合规红线（不可省略）
 
@@ -354,16 +343,13 @@ workspace/
 - [references/storyboard-plan.md](references/storyboard-plan.md) — 分镜规划方法论（阶段四；方案 B + Method B 五步 + MG 画风双层 + 花生分镜规划子 agent 派单指令）
 - [references/storyboard-plan-aroll.md](references/storyboard-plan-aroll.md) — A Roll 附加方法论（可选叠加层，仅当用户声明本片有真人出镜时加载）
 - [references/data-fetching.md](references/data-fetching.md) — 创作阶段五个采集脚本手册（web_search / web_fetch / xueqiu_quote / xueqiu_hot_posts / xueqiu_hot_stocks 用法 + JSON 结构 + 热帖/选题发现子 agent 派单）
-- [references/data-tracking.md](references/data-tracking.md) — 发布后八个数据脚本手册（抖音/小红书/B站/视频号 账号级+稿件级 + cookie + 更新范围规则）
 
-脚本（用法详见上面对应的 data-fetching / data-tracking）：
+脚本（用法详见上面对应的 data-fetching）：
 
 - `scripts/web_search.py` / `web_fetch.py` — 联网搜索 / 抓单个网页正文（替代自带 WebSearch/WebFetch）
 - `scripts/xueqiu_quote.py` / `xueqiu_hot_posts.py` / `xueqiu_hot_stocks.py` — 雪球基础行情 / 热帖 / 全市场热榜
 - `scripts/generate_cover.py` — 调用 gpt-image-2 生成封面
-- `scripts/douyin_metrics.py` / `douyin_account.py` / `ingest_metrics.py` — 抖音稿件级(首选) / 账号级 / xlsx 备选
-- `scripts/xiaohongshu_metrics.py` / `xiaohongshu_account.py` — 小红书稿件级 / 账号级
-- `scripts/bilibili_metrics.py` / `bilibili_account.py` — B站稿件级 / 账号级
-- `scripts/channels_metrics.py` — 视频号账号级（默认）/ 稿件级（`--video`）
 - `workspace/huasheng.md` — 账号级 Memory，开工前先读
 - `workspace/reports/` — 分析复盘报告目录（写法见其 README.md）
+
+**发布后数据抓取（抖音/小红书/B站/视频号）已拆分到 `danchaofan-data-tracker` 技能**——脚本和 cookie 在那边，数据仍写回本技能 `workspace/`。触发语"更新数据""更新账号数据"等走那个技能。

@@ -1,0 +1,3507 @@
+{
+  "dashboard": {
+    "metrics": [
+      {
+        "english_metric_name": "play_cnt",
+        "metric_name": "播放量",
+        "metric_value": 1578311,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "douyin_value": 43460,
+            "value": 44616,
+            "xigua_value": 0,
+            "yumme_value": 1156
+          },
+          {
+            "change_rate": -0.08216783216783216,
+            "date_time": "20260723",
+            "douyin_value": 40262,
+            "value": 40950,
+            "xigua_value": 0,
+            "yumme_value": 688
+          },
+          {
+            "change_rate": -0.19606837606837607,
+            "date_time": "20260724",
+            "douyin_value": 31685,
+            "value": 32921,
+            "xigua_value": 0,
+            "yumme_value": 1236
+          },
+          {
+            "change_rate": 0.4598280732663042,
+            "date_time": "20260725",
+            "douyin_value": 29256,
+            "value": 48059,
+            "xigua_value": 0,
+            "yumme_value": 18803
+          },
+          {
+            "change_rate": -0.6412326515324913,
+            "date_time": "20260726",
+            "douyin_value": 14085,
+            "value": 17242,
+            "xigua_value": 0,
+            "yumme_value": 3157
+          },
+          {
+            "change_rate": -0.0830530100916367,
+            "date_time": "20260727",
+            "douyin_value": 12387,
+            "value": 15810,
+            "xigua_value": 0,
+            "yumme_value": 3423
+          },
+          {
+            "change_rate": 0.5484503478810879,
+            "date_time": "20260728",
+            "douyin_value": 22082,
+            "value": 24481,
+            "xigua_value": 0,
+            "yumme_value": 2399
+          },
+          {
+            "change_rate": -0.480004901760549,
+            "date_time": "20260729",
+            "douyin_value": 9730,
+            "value": 12730,
+            "xigua_value": 0,
+            "yumme_value": 3000
+          },
+          {
+            "change_rate": 1.259465828750982,
+            "date_time": "20260730",
+            "douyin_value": 23664,
+            "value": 28763,
+            "xigua_value": 0,
+            "yumme_value": 5099
+          },
+          {
+            "change_rate": 4.840176615791121,
+            "date_time": "20260731",
+            "douyin_value": 131559,
+            "value": 167981,
+            "xigua_value": 0,
+            "yumme_value": 36422
+          },
+          {
+            "change_rate": -0.423077609967794,
+            "date_time": "20260801",
+            "douyin_value": 80482,
+            "value": 96912,
+            "xigua_value": 0,
+            "yumme_value": 16430
+          },
+          {
+            "change_rate": 0.47076729403995377,
+            "date_time": "20260802",
+            "douyin_value": 126625,
+            "value": 142535,
+            "xigua_value": 0,
+            "yumme_value": 15910
+          },
+          {
+            "change_rate": -0.8632265759287192,
+            "date_time": "20260803",
+            "douyin_value": 16258,
+            "value": 19495,
+            "xigua_value": 0,
+            "yumme_value": 3237
+          },
+          {
+            "change_rate": 0.13398307258271352,
+            "date_time": "20260804",
+            "douyin_value": 18567,
+            "value": 22107,
+            "xigua_value": 0,
+            "yumme_value": 3540
+          },
+          {
+            "change_rate": 0.8868231781788574,
+            "date_time": "20260805",
+            "douyin_value": 28222,
+            "value": 41712,
+            "xigua_value": 0,
+            "yumme_value": 13490
+          },
+          {
+            "change_rate": -0.2580072880705792,
+            "date_time": "20260806",
+            "douyin_value": 14839,
+            "value": 30950,
+            "xigua_value": 0,
+            "yumme_value": 16111
+          },
+          {
+            "change_rate": 2.545815831987076,
+            "date_time": "20260807",
+            "douyin_value": 85675,
+            "value": 109743,
+            "xigua_value": 0,
+            "yumme_value": 24068
+          },
+          {
+            "change_rate": -0.21179482973857103,
+            "date_time": "20260808",
+            "douyin_value": 55232,
+            "value": 86500,
+            "xigua_value": 0,
+            "yumme_value": 31268
+          },
+          {
+            "change_rate": 0.07582658959537572,
+            "date_time": "20260809",
+            "douyin_value": 55644,
+            "value": 93059,
+            "xigua_value": 0,
+            "yumme_value": 37415
+          },
+          {
+            "change_rate": -0.22335292663793938,
+            "date_time": "20260810",
+            "douyin_value": 39108,
+            "value": 72274,
+            "xigua_value": 0,
+            "yumme_value": 33166
+          },
+          {
+            "change_rate": -0.289398677255998,
+            "date_time": "20260811",
+            "douyin_value": 23273,
+            "value": 51358,
+            "xigua_value": 0,
+            "yumme_value": 28085
+          },
+          {
+            "change_rate": -0.11129716889286966,
+            "date_time": "20260812",
+            "douyin_value": 20476,
+            "value": 45642,
+            "xigua_value": 0,
+            "yumme_value": 25166
+          },
+          {
+            "change_rate": -0.2832040664300425,
+            "date_time": "20260813",
+            "douyin_value": 15413,
+            "value": 32716,
+            "xigua_value": 0,
+            "yumme_value": 17303
+          },
+          {
+            "change_rate": 0.8179484044504218,
+            "date_time": "20260814",
+            "douyin_value": 38344,
+            "value": 59476,
+            "xigua_value": 0,
+            "yumme_value": 21132
+          },
+          {
+            "change_rate": -0.32840137198197594,
+            "date_time": "20260815",
+            "douyin_value": 12003,
+            "value": 39944,
+            "xigua_value": 0,
+            "yumme_value": 27941
+          },
+          {
+            "change_rate": 1.5945573803324655,
+            "date_time": "20260816",
+            "douyin_value": 23345,
+            "value": 103637,
+            "xigua_value": 0,
+            "yumme_value": 80292
+          },
+          {
+            "change_rate": -0.7376323127840443,
+            "date_time": "20260817",
+            "douyin_value": 9199,
+            "value": 27191,
+            "xigua_value": 0,
+            "yumme_value": 17992
+          },
+          {
+            "change_rate": -0.1291236070758707,
+            "date_time": "20260818",
+            "douyin_value": 9474,
+            "value": 23680,
+            "xigua_value": 0,
+            "yumme_value": 14206
+          },
+          {
+            "change_rate": 0.0017736486486486487,
+            "date_time": "20260819",
+            "douyin_value": 11102,
+            "value": 23722,
+            "xigua_value": 0,
+            "yumme_value": 12620
+          },
+          {
+            "change_rate": -0.06816457297023859,
+            "date_time": "20260820",
+            "douyin_value": 8733,
+            "value": 22105,
+            "xigua_value": 0,
+            "yumme_value": 13372
+          }
+        ]
+      },
+      {
+        "english_metric_name": "digg_cnt",
+        "metric_name": "作品点赞",
+        "metric_value": 18440,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "douyin_value": 548,
+            "value": 557,
+            "xigua_value": 0,
+            "yumme_value": 9
+          },
+          {
+            "change_rate": -0.03231597845601436,
+            "date_time": "20260723",
+            "douyin_value": 530,
+            "value": 539,
+            "xigua_value": 0,
+            "yumme_value": 9
+          },
+          {
+            "change_rate": -0.08534322820037106,
+            "date_time": "20260724",
+            "douyin_value": 474,
+            "value": 493,
+            "xigua_value": 0,
+            "yumme_value": 19
+          },
+          {
+            "change_rate": 0.09127789046653144,
+            "date_time": "20260725",
+            "douyin_value": 433,
+            "value": 538,
+            "xigua_value": 0,
+            "yumme_value": 105
+          },
+          {
+            "change_rate": -0.4256505576208178,
+            "date_time": "20260726",
+            "douyin_value": 249,
+            "value": 309,
+            "xigua_value": 0,
+            "yumme_value": 60
+          },
+          {
+            "change_rate": -0.23624595469255663,
+            "date_time": "20260727",
+            "douyin_value": 169,
+            "value": 236,
+            "xigua_value": 0,
+            "yumme_value": 67
+          },
+          {
+            "change_rate": -0.19491525423728814,
+            "date_time": "20260728",
+            "douyin_value": 157,
+            "value": 190,
+            "xigua_value": 0,
+            "yumme_value": 33
+          },
+          {
+            "change_rate": -0.4,
+            "date_time": "20260729",
+            "douyin_value": 81,
+            "value": 114,
+            "xigua_value": 0,
+            "yumme_value": 33
+          },
+          {
+            "change_rate": 1.868421052631579,
+            "date_time": "20260730",
+            "douyin_value": 271,
+            "value": 327,
+            "xigua_value": 0,
+            "yumme_value": 56
+          },
+          {
+            "change_rate": 4.755351681957187,
+            "date_time": "20260731",
+            "douyin_value": 1675,
+            "value": 1882,
+            "xigua_value": 0,
+            "yumme_value": 207
+          },
+          {
+            "change_rate": -0.1689691817215728,
+            "date_time": "20260801",
+            "douyin_value": 1386,
+            "value": 1564,
+            "xigua_value": 0,
+            "yumme_value": 178
+          },
+          {
+            "change_rate": 0.05754475703324808,
+            "date_time": "20260802",
+            "douyin_value": 1489,
+            "value": 1654,
+            "xigua_value": 0,
+            "yumme_value": 165
+          },
+          {
+            "change_rate": -0.907496977025393,
+            "date_time": "20260803",
+            "douyin_value": 121,
+            "value": 153,
+            "xigua_value": 0,
+            "yumme_value": 32
+          },
+          {
+            "change_rate": 0.37254901960784315,
+            "date_time": "20260804",
+            "douyin_value": 165,
+            "value": 210,
+            "xigua_value": 0,
+            "yumme_value": 45
+          },
+          {
+            "change_rate": 1.2190476190476192,
+            "date_time": "20260805",
+            "douyin_value": 246,
+            "value": 466,
+            "xigua_value": 0,
+            "yumme_value": 220
+          },
+          {
+            "change_rate": -0.21244635193133046,
+            "date_time": "20260806",
+            "douyin_value": 125,
+            "value": 367,
+            "xigua_value": 0,
+            "yumme_value": 242
+          },
+          {
+            "change_rate": 1.9373297002724796,
+            "date_time": "20260807",
+            "douyin_value": 823,
+            "value": 1078,
+            "xigua_value": 0,
+            "yumme_value": 255
+          },
+          {
+            "change_rate": -0.21614100185528756,
+            "date_time": "20260808",
+            "douyin_value": 515,
+            "value": 845,
+            "xigua_value": 0,
+            "yumme_value": 330
+          },
+          {
+            "change_rate": 0.15739644970414202,
+            "date_time": "20260809",
+            "douyin_value": 677,
+            "value": 978,
+            "xigua_value": 0,
+            "yumme_value": 301
+          },
+          {
+            "change_rate": -0.3721881390593047,
+            "date_time": "20260810",
+            "douyin_value": 428,
+            "value": 614,
+            "xigua_value": 0,
+            "yumme_value": 186
+          },
+          {
+            "change_rate": -0.15472312703583063,
+            "date_time": "20260811",
+            "douyin_value": 305,
+            "value": 519,
+            "xigua_value": 0,
+            "yumme_value": 214
+          },
+          {
+            "change_rate": 0.18497109826589594,
+            "date_time": "20260812",
+            "douyin_value": 199,
+            "value": 615,
+            "xigua_value": 0,
+            "yumme_value": 416
+          },
+          {
+            "change_rate": -0.33658536585365856,
+            "date_time": "20260813",
+            "douyin_value": 178,
+            "value": 408,
+            "xigua_value": 0,
+            "yumme_value": 230
+          },
+          {
+            "change_rate": 1.2009803921568627,
+            "date_time": "20260814",
+            "douyin_value": 606,
+            "value": 898,
+            "xigua_value": 0,
+            "yumme_value": 292
+          },
+          {
+            "change_rate": -0.311804008908686,
+            "date_time": "20260815",
+            "douyin_value": 156,
+            "value": 618,
+            "xigua_value": 0,
+            "yumme_value": 462
+          },
+          {
+            "change_rate": 0.7588996763754046,
+            "date_time": "20260816",
+            "douyin_value": 311,
+            "value": 1087,
+            "xigua_value": 0,
+            "yumme_value": 776
+          },
+          {
+            "change_rate": -0.671573137074517,
+            "date_time": "20260817",
+            "douyin_value": 113,
+            "value": 357,
+            "xigua_value": 0,
+            "yumme_value": 244
+          },
+          {
+            "change_rate": -0.24369747899159663,
+            "date_time": "20260818",
+            "douyin_value": 115,
+            "value": 270,
+            "xigua_value": 0,
+            "yumme_value": 155
+          },
+          {
+            "change_rate": 0.17407407407407408,
+            "date_time": "20260819",
+            "douyin_value": 191,
+            "value": 317,
+            "xigua_value": 0,
+            "yumme_value": 126
+          },
+          {
+            "change_rate": -0.25236593059936907,
+            "date_time": "20260820",
+            "douyin_value": 89,
+            "value": 237,
+            "xigua_value": 0,
+            "yumme_value": 148
+          }
+        ]
+      },
+      {
+        "english_metric_name": "share_count",
+        "metric_name": "作品分享",
+        "metric_value": 4248,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "douyin_value": 320,
+            "value": 323,
+            "xigua_value": 0,
+            "yumme_value": 3
+          },
+          {
+            "change_rate": -0.10835913312693499,
+            "date_time": "20260723",
+            "douyin_value": 287,
+            "value": 288,
+            "xigua_value": 0,
+            "yumme_value": 1
+          },
+          {
+            "change_rate": -0.2152777777777778,
+            "date_time": "20260724",
+            "douyin_value": 224,
+            "value": 226,
+            "xigua_value": 0,
+            "yumme_value": 2
+          },
+          {
+            "change_rate": -0.1415929203539823,
+            "date_time": "20260725",
+            "douyin_value": 191,
+            "value": 194,
+            "xigua_value": 0,
+            "yumme_value": 3
+          },
+          {
+            "change_rate": -0.5309278350515464,
+            "date_time": "20260726",
+            "douyin_value": 87,
+            "value": 91,
+            "xigua_value": 0,
+            "yumme_value": 4
+          },
+          {
+            "change_rate": -0.2967032967032967,
+            "date_time": "20260727",
+            "douyin_value": 59,
+            "value": 64,
+            "xigua_value": 0,
+            "yumme_value": 5
+          },
+          {
+            "change_rate": 0.1875,
+            "date_time": "20260728",
+            "douyin_value": 75,
+            "value": 76,
+            "xigua_value": 0,
+            "yumme_value": 1
+          },
+          {
+            "change_rate": -0.8421052631578947,
+            "date_time": "20260729",
+            "douyin_value": 9,
+            "value": 12,
+            "xigua_value": 0,
+            "yumme_value": 3
+          },
+          {
+            "change_rate": 6.666666666666667,
+            "date_time": "20260730",
+            "douyin_value": 90,
+            "value": 92,
+            "xigua_value": 0,
+            "yumme_value": 2
+          },
+          {
+            "change_rate": 4.8478260869565215,
+            "date_time": "20260731",
+            "douyin_value": 532,
+            "value": 538,
+            "xigua_value": 0,
+            "yumme_value": 6
+          },
+          {
+            "change_rate": -0.31784386617100374,
+            "date_time": "20260801",
+            "douyin_value": 360,
+            "value": 367,
+            "xigua_value": 0,
+            "yumme_value": 7
+          },
+          {
+            "change_rate": 0.7302452316076294,
+            "date_time": "20260802",
+            "douyin_value": 627,
+            "value": 635,
+            "xigua_value": 0,
+            "yumme_value": 8
+          },
+          {
+            "change_rate": -0.8614173228346457,
+            "date_time": "20260803",
+            "douyin_value": 86,
+            "value": 88,
+            "xigua_value": 0,
+            "yumme_value": 2
+          },
+          {
+            "change_rate": -0.6931818181818182,
+            "date_time": "20260804",
+            "douyin_value": 25,
+            "value": 27,
+            "xigua_value": 0,
+            "yumme_value": 2
+          },
+          {
+            "change_rate": 2.5555555555555554,
+            "date_time": "20260805",
+            "douyin_value": 44,
+            "value": 96,
+            "xigua_value": 0,
+            "yumme_value": 52
+          },
+          {
+            "change_rate": -0.4583333333333333,
+            "date_time": "20260806",
+            "douyin_value": 18,
+            "value": 52,
+            "xigua_value": 0,
+            "yumme_value": 34
+          },
+          {
+            "change_rate": 2.0961538461538463,
+            "date_time": "20260807",
+            "douyin_value": 138,
+            "value": 161,
+            "xigua_value": 0,
+            "yumme_value": 23
+          },
+          {
+            "change_rate": -0.2919254658385093,
+            "date_time": "20260808",
+            "douyin_value": 63,
+            "value": 114,
+            "xigua_value": 0,
+            "yumme_value": 51
+          },
+          {
+            "change_rate": 0.10526315789473684,
+            "date_time": "20260809",
+            "douyin_value": 109,
+            "value": 126,
+            "xigua_value": 0,
+            "yumme_value": 17
+          },
+          {
+            "change_rate": -0.1349206349206349,
+            "date_time": "20260810",
+            "douyin_value": 87,
+            "value": 109,
+            "xigua_value": 0,
+            "yumme_value": 22
+          },
+          {
+            "change_rate": -0.4036697247706422,
+            "date_time": "20260811",
+            "douyin_value": 56,
+            "value": 65,
+            "xigua_value": 0,
+            "yumme_value": 9
+          },
+          {
+            "change_rate": 0.09230769230769231,
+            "date_time": "20260812",
+            "douyin_value": 34,
+            "value": 71,
+            "xigua_value": 0,
+            "yumme_value": 37
+          },
+          {
+            "change_rate": -0.3380281690140845,
+            "date_time": "20260813",
+            "douyin_value": 21,
+            "value": 47,
+            "xigua_value": 0,
+            "yumme_value": 26
+          },
+          {
+            "change_rate": 2.106382978723404,
+            "date_time": "20260814",
+            "douyin_value": 127,
+            "value": 146,
+            "xigua_value": 0,
+            "yumme_value": 19
+          },
+          {
+            "change_rate": -0.5342465753424658,
+            "date_time": "20260815",
+            "douyin_value": 30,
+            "value": 68,
+            "xigua_value": 0,
+            "yumme_value": 38
+          },
+          {
+            "change_rate": -0.058823529411764705,
+            "date_time": "20260816",
+            "douyin_value": 42,
+            "value": 64,
+            "xigua_value": 0,
+            "yumme_value": 22
+          },
+          {
+            "change_rate": -0.6875,
+            "date_time": "20260817",
+            "douyin_value": 15,
+            "value": 20,
+            "xigua_value": 0,
+            "yumme_value": 5
+          },
+          {
+            "change_rate": 0.6,
+            "date_time": "20260818",
+            "douyin_value": 23,
+            "value": 32,
+            "xigua_value": 0,
+            "yumme_value": 9
+          },
+          {
+            "change_rate": -0.15625,
+            "date_time": "20260819",
+            "douyin_value": 18,
+            "value": 27,
+            "xigua_value": 0,
+            "yumme_value": 9
+          },
+          {
+            "change_rate": 0.07407407407407407,
+            "date_time": "20260820",
+            "douyin_value": 14,
+            "value": 29,
+            "xigua_value": 0,
+            "yumme_value": 15
+          }
+        ]
+      },
+      {
+        "english_metric_name": "comment_cnt",
+        "metric_name": "作品评论",
+        "metric_value": 2571,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "douyin_value": 199,
+            "value": 199,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.1306532663316583,
+            "date_time": "20260723",
+            "douyin_value": 173,
+            "value": 173,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.09826589595375723,
+            "date_time": "20260724",
+            "douyin_value": 156,
+            "value": 156,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 0.5641025641025641,
+            "date_time": "20260725",
+            "douyin_value": 244,
+            "value": 244,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.6557377049180327,
+            "date_time": "20260726",
+            "douyin_value": 84,
+            "value": 84,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.2619047619047619,
+            "date_time": "20260727",
+            "douyin_value": 62,
+            "value": 62,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.5483870967741935,
+            "date_time": "20260728",
+            "douyin_value": 28,
+            "value": 28,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.42857142857142855,
+            "date_time": "20260729",
+            "douyin_value": 16,
+            "value": 16,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 4.625,
+            "date_time": "20260730",
+            "douyin_value": 90,
+            "value": 90,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 2.9,
+            "date_time": "20260731",
+            "douyin_value": 351,
+            "value": 351,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.1908831908831909,
+            "date_time": "20260801",
+            "douyin_value": 284,
+            "value": 284,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 0.1056338028169014,
+            "date_time": "20260802",
+            "douyin_value": 314,
+            "value": 314,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.8280254777070064,
+            "date_time": "20260803",
+            "douyin_value": 54,
+            "value": 54,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -16.12962962962963,
+            "date_time": "20260804",
+            "douyin_value": -817,
+            "value": -817,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -1.1003671970624236,
+            "date_time": "20260805",
+            "douyin_value": 82,
+            "value": 82,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.3902439024390244,
+            "date_time": "20260806",
+            "douyin_value": 50,
+            "value": 50,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 2.94,
+            "date_time": "20260807",
+            "douyin_value": 197,
+            "value": 197,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.23857868020304568,
+            "date_time": "20260808",
+            "douyin_value": 150,
+            "value": 150,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 0.19333333333333333,
+            "date_time": "20260809",
+            "douyin_value": 179,
+            "value": 179,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.4860335195530726,
+            "date_time": "20260810",
+            "douyin_value": 92,
+            "value": 92,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.16304347826086957,
+            "date_time": "20260811",
+            "douyin_value": 77,
+            "value": 77,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.05194805194805195,
+            "date_time": "20260812",
+            "douyin_value": 73,
+            "value": 73,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.410958904109589,
+            "date_time": "20260813",
+            "douyin_value": 43,
+            "value": 43,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 1.5116279069767442,
+            "date_time": "20260814",
+            "douyin_value": 108,
+            "value": 108,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.5,
+            "date_time": "20260815",
+            "douyin_value": 54,
+            "value": 54,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 0.9074074074074074,
+            "date_time": "20260816",
+            "douyin_value": 103,
+            "value": 103,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.8446601941747572,
+            "date_time": "20260817",
+            "douyin_value": 16,
+            "value": 16,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 1.25,
+            "date_time": "20260818",
+            "douyin_value": 36,
+            "value": 36,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 0.25,
+            "date_time": "20260819",
+            "douyin_value": 45,
+            "value": 45,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.37777777777777777,
+            "date_time": "20260820",
+            "douyin_value": 28,
+            "value": 28,
+            "xigua_value": 0
+          }
+        ]
+      },
+      {
+        "english_metric_name": "net_fans_cnt",
+        "metric_name": "净增粉丝",
+        "metric_value": 13328,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "douyin_value": 169,
+            "value": 172,
+            "xigua_value": 2,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": -0.0755813953488372,
+            "date_time": "20260723",
+            "douyin_value": 153,
+            "value": 159,
+            "xigua_value": 2,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": 0.08176100628930817,
+            "date_time": "20260724",
+            "douyin_value": 138,
+            "value": 172,
+            "xigua_value": 20,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": 0.3372093023255814,
+            "date_time": "20260725",
+            "douyin_value": 151,
+            "value": 230,
+            "xigua_value": 14,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": -0.2826086956521739,
+            "date_time": "20260726",
+            "douyin_value": 76,
+            "value": 165,
+            "xigua_value": 6,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": -0.07272727272727272,
+            "date_time": "20260727",
+            "douyin_value": 74,
+            "value": 153,
+            "xigua_value": 2,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": 0.1503267973856209,
+            "date_time": "20260728",
+            "douyin_value": 139,
+            "value": 176,
+            "xigua_value": 1,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": -0.5965909090909091,
+            "date_time": "20260729",
+            "douyin_value": 32,
+            "value": 71,
+            "xigua_value": 3,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": 2.3098591549295775,
+            "date_time": "20260730",
+            "douyin_value": 141,
+            "value": 235,
+            "xigua_value": 0,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": 3.629787234042553,
+            "date_time": "20260731",
+            "douyin_value": 899,
+            "value": 1088,
+            "xigua_value": 0,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": -0.05606617647058824,
+            "date_time": "20260801",
+            "douyin_value": 819,
+            "value": 1027,
+            "xigua_value": 34,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": 0.04965920155793573,
+            "date_time": "20260802",
+            "douyin_value": 894,
+            "value": 1078,
+            "xigua_value": 29,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": -0.9359925788497218,
+            "date_time": "20260803",
+            "douyin_value": 34,
+            "value": 69,
+            "xigua_value": 1,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": 0.5652173913043478,
+            "date_time": "20260804",
+            "douyin_value": 41,
+            "value": 108,
+            "xigua_value": 1,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": 2.574074074074074,
+            "date_time": "20260805",
+            "douyin_value": -35,
+            "value": 386,
+            "xigua_value": 0,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": -0.012953367875647668,
+            "date_time": "20260806",
+            "douyin_value": -167,
+            "value": 381,
+            "xigua_value": 50,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": 1.2257217847769029,
+            "date_time": "20260807",
+            "douyin_value": 388,
+            "value": 848,
+            "xigua_value": 39,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": -0.1179245283018868,
+            "date_time": "20260808",
+            "douyin_value": 39,
+            "value": 748,
+            "xigua_value": 58,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": 0.3716577540106952,
+            "date_time": "20260809",
+            "douyin_value": 499,
+            "value": 1026,
+            "xigua_value": 127,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": -0.5428849902534113,
+            "date_time": "20260810",
+            "douyin_value": 212,
+            "value": 469,
+            "xigua_value": 22,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": -0.13859275053304904,
+            "date_time": "20260811",
+            "douyin_value": 78,
+            "value": 404,
+            "xigua_value": 21,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": 0.3118811881188119,
+            "date_time": "20260812",
+            "douyin_value": -98,
+            "value": 530,
+            "xigua_value": 30,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": -0.269811320754717,
+            "date_time": "20260813",
+            "douyin_value": -25,
+            "value": 387,
+            "xigua_value": 23,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": 1.268733850129199,
+            "date_time": "20260814",
+            "douyin_value": 265,
+            "value": 878,
+            "xigua_value": 57,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": -0.25968109339407747,
+            "date_time": "20260815",
+            "douyin_value": -178,
+            "value": 650,
+            "xigua_value": 68,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": 0.2692307692307692,
+            "date_time": "20260816",
+            "douyin_value": -30,
+            "value": 825,
+            "xigua_value": 67,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": -0.6254545454545455,
+            "date_time": "20260817",
+            "douyin_value": -15,
+            "value": 309,
+            "xigua_value": 25,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": -0.43042071197411,
+            "date_time": "20260818",
+            "douyin_value": 7,
+            "value": 176,
+            "xigua_value": 16,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": 0.05113636363636364,
+            "date_time": "20260819",
+            "douyin_value": 36,
+            "value": 185,
+            "xigua_value": 14,
+            "yumme_value": 0
+          },
+          {
+            "change_rate": 0.20540540540540542,
+            "date_time": "20260820",
+            "douyin_value": 1,
+            "value": 223,
+            "xigua_value": 31,
+            "yumme_value": 0
+          }
+        ]
+      },
+      {
+        "english_metric_name": "cancel_fans_cnt",
+        "metric_name": "取关粉丝",
+        "metric_value": 437,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "douyin_value": 4,
+            "value": 4,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 1,
+            "date_time": "20260723",
+            "douyin_value": 8,
+            "value": 8,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.75,
+            "date_time": "20260724",
+            "douyin_value": 2,
+            "value": 2,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 1,
+            "date_time": "20260725",
+            "douyin_value": 3,
+            "value": 4,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 1.5,
+            "date_time": "20260726",
+            "douyin_value": 5,
+            "value": 10,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.5,
+            "date_time": "20260727",
+            "douyin_value": 4,
+            "value": 5,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 0.6,
+            "date_time": "20260728",
+            "douyin_value": 8,
+            "value": 8,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.5,
+            "date_time": "20260729",
+            "douyin_value": 2,
+            "value": 4,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 0.75,
+            "date_time": "20260730",
+            "douyin_value": 6,
+            "value": 7,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 1.4285714285714286,
+            "date_time": "20260731",
+            "douyin_value": 16,
+            "value": 17,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.5294117647058824,
+            "date_time": "20260801",
+            "douyin_value": 8,
+            "value": 8,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 1.875,
+            "date_time": "20260802",
+            "douyin_value": 20,
+            "value": 23,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.2608695652173913,
+            "date_time": "20260803",
+            "douyin_value": 15,
+            "value": 17,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.058823529411764705,
+            "date_time": "20260804",
+            "douyin_value": 10,
+            "value": 16,
+            "xigua_value": 1
+          },
+          {
+            "change_rate": -0.25,
+            "date_time": "20260805",
+            "douyin_value": 7,
+            "value": 12,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 0.4166666666666667,
+            "date_time": "20260806",
+            "douyin_value": 11,
+            "value": 17,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.11764705882352941,
+            "date_time": "20260807",
+            "douyin_value": 9,
+            "value": 15,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 0,
+            "date_time": "20260808",
+            "douyin_value": 5,
+            "value": 15,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 0.8,
+            "date_time": "20260809",
+            "douyin_value": 15,
+            "value": 27,
+            "xigua_value": 5
+          },
+          {
+            "change_rate": -0.48148148148148145,
+            "date_time": "20260810",
+            "douyin_value": 11,
+            "value": 14,
+            "xigua_value": 1
+          },
+          {
+            "change_rate": 0.21428571428571427,
+            "date_time": "20260811",
+            "douyin_value": 12,
+            "value": 17,
+            "xigua_value": 2
+          },
+          {
+            "change_rate": 0.35294117647058826,
+            "date_time": "20260812",
+            "douyin_value": 10,
+            "value": 23,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.17391304347826086,
+            "date_time": "20260813",
+            "douyin_value": 11,
+            "value": 19,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.05263157894736842,
+            "date_time": "20260814",
+            "douyin_value": 15,
+            "value": 18,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.05555555555555555,
+            "date_time": "20260815",
+            "douyin_value": 0,
+            "value": 17,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": 1.3529411764705883,
+            "date_time": "20260816",
+            "douyin_value": 6,
+            "value": 40,
+            "xigua_value": 0
+          },
+          {
+            "change_rate": -0.45,
+            "date_time": "20260817",
+            "douyin_value": 2,
+            "value": 22,
+            "xigua_value": 2
+          },
+          {
+            "change_rate": -0.2727272727272727,
+            "date_time": "20260818",
+            "douyin_value": 6,
+            "value": 16,
+            "xigua_value": 2
+          },
+          {
+            "change_rate": 0.3125,
+            "date_time": "20260819",
+            "douyin_value": 13,
+            "value": 21,
+            "xigua_value": 2
+          },
+          {
+            "change_rate": -0.47619047619047616,
+            "date_time": "20260820",
+            "douyin_value": -1,
+            "value": 11,
+            "xigua_value": 0
+          }
+        ]
+      },
+      {
+        "english_metric_name": "cover_click_ratio",
+        "metric_name": "封面点击率",
+        "metric_value": 0.16383367525449166,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "douyin_value": 0.16083916083916083,
+            "value": 0.17473118279569894,
+            "yumme_value": 0.5172413793103449
+          },
+          {
+            "change_rate": -0.1320728126834998,
+            "date_time": "20260723",
+            "douyin_value": 0.14074914869466515,
+            "value": 0.15165394402035623,
+            "yumme_value": 0.24630541871921183
+          },
+          {
+            "change_rate": -0.2260538262251813,
+            "date_time": "20260724",
+            "douyin_value": 0.07186311787072243,
+            "value": 0.11737198971241525,
+            "yumme_value": 0.19004250151791136
+          },
+          {
+            "change_rate": 0.4815727482603212,
+            "date_time": "20260725",
+            "douyin_value": 0.18704156479217604,
+            "value": 0.1738951413670052,
+            "yumme_value": 0.17008849557522124
+          },
+          {
+            "change_rate": -0.048681439749348104,
+            "date_time": "20260726",
+            "douyin_value": 0.10627094303494496,
+            "value": 0.16542967551984297,
+            "yumme_value": 0.17412410299704517
+          },
+          {
+            "change_rate": -0.06997287142589097,
+            "date_time": "20260727",
+            "douyin_value": 0.22114608555286522,
+            "value": 0.15385408610466614,
+            "yumme_value": 0.14926195197179995
+          },
+          {
+            "change_rate": 0.14903275985013287,
+            "date_time": "20260728",
+            "douyin_value": 0.436,
+            "value": 0.1767833851710645,
+            "yumme_value": 0.14787554366008698
+          },
+          {
+            "change_rate": -0.1403487891694112,
+            "date_time": "20260729",
+            "douyin_value": 0.4581497797356828,
+            "value": 0.15197205111703596,
+            "yumme_value": 0.1386357094886309
+          },
+          {
+            "change_rate": 0.10564841150855378,
+            "date_time": "20260730",
+            "douyin_value": 0.584192439862543,
+            "value": 0.16802765691124755,
+            "yumme_value": 0.14518360160965796
+          },
+          {
+            "change_rate": 0.11269127265101085,
+            "date_time": "20260731",
+            "douyin_value": 0.32854209445585214,
+            "value": 0.18696290740914345,
+            "yumme_value": 0.12937401090205733
+          },
+          {
+            "change_rate": 0.051946843075618664,
+            "date_time": "20260801",
+            "douyin_value": 0.2835651725914477,
+            "value": 0.19667504022128765,
+            "yumme_value": 0.1638936401803763
+          },
+          {
+            "change_rate": 0.26165357470022754,
+            "date_time": "20260802",
+            "douyin_value": 0.4792589609343536,
+            "value": 0.2481357675494986,
+            "yumme_value": 0.1610700920400526
+          },
+          {
+            "change_rate": -0.3883491728651828,
+            "date_time": "20260803",
+            "douyin_value": 0.15743589743589745,
+            "value": 0.15177244746338356,
+            "yumme_value": 0.15111874038120043
+          },
+          {
+            "change_rate": 0.13365196615894376,
+            "date_time": "20260804",
+            "douyin_value": 0.2749279538904899,
+            "value": 0.17205713347561977,
+            "yumme_value": 0.1612649655339219
+          },
+          {
+            "change_rate": 0.04580910063603797,
+            "date_time": "20260805",
+            "douyin_value": 0.3003442340791738,
+            "value": 0.17993891601815265,
+            "yumme_value": 0.17490877060525983
+          },
+          {
+            "change_rate": 0.059888467445286524,
+            "date_time": "20260806",
+            "douyin_value": 0.15556635877491493,
+            "value": 0.19071518193224593,
+            "yumme_value": 0.19198538325046996
+          },
+          {
+            "change_rate": -0.14585827448447566,
+            "date_time": "20260807",
+            "douyin_value": 0.6177510608203678,
+            "value": 0.1628977945776157,
+            "yumme_value": 0.1451075305995436
+          },
+          {
+            "change_rate": -0.09249684642758114,
+            "date_time": "20260808",
+            "douyin_value": 0.5885664789952361,
+            "value": 0.1478302622891783,
+            "yumme_value": 0.13740950469500393
+          },
+          {
+            "change_rate": 0.15045818437037592,
+            "date_time": "20260809",
+            "douyin_value": 0.6042390548992356,
+            "value": 0.17007253514820453,
+            "yumme_value": 0.1464773306645014
+          },
+          {
+            "change_rate": -0.06499944651744022,
+            "date_time": "20260810",
+            "douyin_value": 0.38122520934332305,
+            "value": 0.15901791449575334,
+            "yumme_value": 0.14633839653958355
+          },
+          {
+            "change_rate": -0.050247502027499044,
+            "date_time": "20260811",
+            "douyin_value": 0.3496669838249286,
+            "value": 0.1510276615147193,
+            "yumme_value": 0.14075986720767245
+          },
+          {
+            "change_rate": 0.19036249082901732,
+            "date_time": "20260812",
+            "douyin_value": 0.38221632382216325,
+            "value": 0.179777663344743,
+            "yumme_value": 0.1750492103101412
+          },
+          {
+            "change_rate": -0.1493672715400743,
+            "date_time": "20260813",
+            "douyin_value": 0.34991119005328597,
+            "value": 0.1529247642870887,
+            "yumme_value": 0.1445834482412816
+          },
+          {
+            "change_rate": 0.10433548194189471,
+            "date_time": "20260814",
+            "douyin_value": 0.3163325471698113,
+            "value": 0.16888024326983275,
+            "yumme_value": 0.15677925094357884
+          },
+          {
+            "change_rate": -0.029907615754863823,
+            "date_time": "20260815",
+            "douyin_value": 0.36378600823045265,
+            "value": 0.16382943784553067,
+            "yumme_value": 0.15929616360650845
+          },
+          {
+            "change_rate": -0.341519150956651,
+            "date_time": "20260816",
+            "douyin_value": 0.4294314381270903,
+            "value": 0.10787854733081961,
+            "yumme_value": 0.10139020110676204
+          },
+          {
+            "change_rate": 0.4467155104334506,
+            "date_time": "20260817",
+            "douyin_value": 0.2753934191702432,
+            "value": 0.15606956766652585,
+            "yumme_value": 0.14989261645560245
+          },
+          {
+            "change_rate": -0.07862700955172855,
+            "date_time": "20260818",
+            "douyin_value": 0.1387878787878788,
+            "value": 0.14379828427887578,
+            "yumme_value": 0.14422335338577819
+          },
+          {
+            "change_rate": 0.03903029970103136,
+            "date_time": "20260819",
+            "douyin_value": 0.2586938083121289,
+            "value": 0.1494107744107744,
+            "yumme_value": 0.141072930822494
+          },
+          {
+            "change_rate": 0.08272461048921796,
+            "date_time": "20260820",
+            "douyin_value": 0.3147982062780269,
+            "value": 0.16177072252679814,
+            "yumme_value": 0.15445620954259012
+          }
+        ]
+      },
+      {
+        "english_metric_name": "homepage_view_cnt",
+        "metric_name": "主页访问",
+        "metric_value": 22154,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "value": 513
+          },
+          {
+            "change_rate": -0.2300194931773879,
+            "date_time": "20260723",
+            "value": 395
+          },
+          {
+            "change_rate": 0.005063291139240506,
+            "date_time": "20260724",
+            "value": 397
+          },
+          {
+            "change_rate": 0.09319899244332494,
+            "date_time": "20260725",
+            "value": 434
+          },
+          {
+            "change_rate": -0.42626728110599077,
+            "date_time": "20260726",
+            "value": 249
+          },
+          {
+            "change_rate": -0.04417670682730924,
+            "date_time": "20260727",
+            "value": 238
+          },
+          {
+            "change_rate": 0.9789915966386554,
+            "date_time": "20260728",
+            "value": 471
+          },
+          {
+            "change_rate": -0.4394904458598726,
+            "date_time": "20260729",
+            "value": 264
+          },
+          {
+            "change_rate": 1.3901515151515151,
+            "date_time": "20260730",
+            "value": 631
+          },
+          {
+            "change_rate": 3.6180665610142633,
+            "date_time": "20260731",
+            "value": 2914
+          },
+          {
+            "change_rate": -0.2076183939601922,
+            "date_time": "20260801",
+            "value": 2309
+          },
+          {
+            "change_rate": 0.22607189259419663,
+            "date_time": "20260802",
+            "value": 2831
+          },
+          {
+            "change_rate": -0.8428117273048393,
+            "date_time": "20260803",
+            "value": 445
+          },
+          {
+            "change_rate": 0.14157303370786517,
+            "date_time": "20260804",
+            "value": 508
+          },
+          {
+            "change_rate": 0.2559055118110236,
+            "date_time": "20260805",
+            "value": 638
+          },
+          {
+            "change_rate": -0.48119122257053293,
+            "date_time": "20260806",
+            "value": 331
+          },
+          {
+            "change_rate": 3.2447129909365557,
+            "date_time": "20260807",
+            "value": 1405
+          },
+          {
+            "change_rate": -0.2875444839857651,
+            "date_time": "20260808",
+            "value": 1001
+          },
+          {
+            "change_rate": 0.38161838161838163,
+            "date_time": "20260809",
+            "value": 1383
+          },
+          {
+            "change_rate": -0.4121475054229935,
+            "date_time": "20260810",
+            "value": 813
+          },
+          {
+            "change_rate": -0.33210332103321033,
+            "date_time": "20260811",
+            "value": 543
+          },
+          {
+            "change_rate": -0.20994475138121546,
+            "date_time": "20260812",
+            "value": 429
+          },
+          {
+            "change_rate": -0.1282051282051282,
+            "date_time": "20260813",
+            "value": 374
+          },
+          {
+            "change_rate": 1.4385026737967914,
+            "date_time": "20260814",
+            "value": 912
+          },
+          {
+            "change_rate": -0.6842105263157895,
+            "date_time": "20260815",
+            "value": 288
+          },
+          {
+            "change_rate": 0.4965277777777778,
+            "date_time": "20260816",
+            "value": 431
+          },
+          {
+            "change_rate": -0.419953596287703,
+            "date_time": "20260817",
+            "value": 250
+          },
+          {
+            "change_rate": -0.104,
+            "date_time": "20260818",
+            "value": 224
+          },
+          {
+            "change_rate": 0.3125,
+            "date_time": "20260819",
+            "value": 294
+          },
+          {
+            "change_rate": -0.1870748299319728,
+            "date_time": "20260820",
+            "value": 239
+          }
+        ]
+      },
+      {
+        "english_metric_name": "publish_cnt",
+        "metric_name": "投稿量",
+        "metric_value": 18,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "value": 1
+          },
+          {
+            "change_rate": -1,
+            "date_time": "20260723",
+            "value": 0
+          },
+          {
+            "date_time": "20260724",
+            "value": 1
+          },
+          {
+            "change_rate": 0,
+            "date_time": "20260725",
+            "value": 1
+          },
+          {
+            "change_rate": -1,
+            "date_time": "20260726",
+            "value": 0
+          },
+          {
+            "date_time": "20260727",
+            "value": 1
+          },
+          {
+            "change_rate": -1,
+            "date_time": "20260728",
+            "value": 0
+          },
+          {
+            "date_time": "20260729",
+            "value": 1
+          },
+          {
+            "change_rate": 0,
+            "date_time": "20260730",
+            "value": 1
+          },
+          {
+            "change_rate": -1,
+            "date_time": "20260731",
+            "value": 0
+          },
+          {
+            "date_time": "20260801",
+            "value": 1
+          },
+          {
+            "change_rate": -1,
+            "date_time": "20260802",
+            "value": 0
+          },
+          {
+            "date_time": "20260803",
+            "value": 1
+          },
+          {
+            "change_rate": 1,
+            "date_time": "20260804",
+            "value": 2
+          },
+          {
+            "change_rate": -1,
+            "date_time": "20260805",
+            "value": 0
+          },
+          {
+            "date_time": "20260806",
+            "value": 0
+          },
+          {
+            "date_time": "20260807",
+            "value": 1
+          },
+          {
+            "change_rate": 0,
+            "date_time": "20260808",
+            "value": 1
+          },
+          {
+            "change_rate": -1,
+            "date_time": "20260809",
+            "value": 0
+          },
+          {
+            "date_time": "20260810",
+            "value": 1
+          },
+          {
+            "change_rate": 0,
+            "date_time": "20260811",
+            "value": 1
+          },
+          {
+            "change_rate": 0,
+            "date_time": "20260812",
+            "value": 1
+          },
+          {
+            "change_rate": -1,
+            "date_time": "20260813",
+            "value": 0
+          },
+          {
+            "date_time": "20260814",
+            "value": 1
+          },
+          {
+            "change_rate": -1,
+            "date_time": "20260815",
+            "value": 0
+          },
+          {
+            "date_time": "20260816",
+            "value": 1
+          },
+          {
+            "change_rate": -1,
+            "date_time": "20260817",
+            "value": 0
+          },
+          {
+            "date_time": "20260818",
+            "value": 1
+          },
+          {
+            "change_rate": 0,
+            "date_time": "20260819",
+            "value": 1
+          },
+          {
+            "change_rate": -1,
+            "date_time": "20260820",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "english_metric_name": "completion_rate_5s",
+        "metric_name": "5秒完播率",
+        "metric_value": 0.7559304457324865,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "value": 0.8500047116471918
+          },
+          {
+            "change_rate": -0.01868701574622215,
+            "date_time": "20260723",
+            "value": 0.8341206602162777
+          },
+          {
+            "change_rate": 0.020857020519795894,
+            "date_time": "20260724",
+            "value": 0.8515179319423943
+          },
+          {
+            "change_rate": -0.007265585683698332,
+            "date_time": "20260725",
+            "value": 0.8453311554466613
+          },
+          {
+            "change_rate": 0.06769644587633229,
+            "date_time": "20260726",
+            "value": 0.9025570702589336
+          },
+          {
+            "change_rate": -0.1280626183452122,
+            "date_time": "20260727",
+            "value": 0.7869732486355909
+          },
+          {
+            "change_rate": -0.11906242578655016,
+            "date_time": "20260728",
+            "value": 0.6932743046239156
+          },
+          {
+            "change_rate": -0.006011240151330786,
+            "date_time": "20260729",
+            "value": 0.6891068662880744
+          },
+          {
+            "change_rate": 0.20506006118900977,
+            "date_time": "20260730",
+            "value": 0.8304151624548737
+          },
+          {
+            "change_rate": -0.005639955357858911,
+            "date_time": "20260731",
+            "value": 0.825731658010139
+          },
+          {
+            "change_rate": 0.04497802387923851,
+            "date_time": "20260801",
+            "value": 0.8628714362419623
+          },
+          {
+            "change_rate": -0.2079866709198241,
+            "date_time": "20260802",
+            "value": 0.6834056787861893
+          },
+          {
+            "change_rate": -0.1262889201058881,
+            "date_time": "20260803",
+            "value": 0.59709911361805
+          },
+          {
+            "change_rate": -0.13228427499832582,
+            "date_time": "20260804",
+            "value": 0.5181122902709433
+          },
+          {
+            "change_rate": 0.2549272731787605,
+            "date_time": "20260805",
+            "value": 0.6501932436301173
+          },
+          {
+            "change_rate": 0.12938005184771142,
+            "date_time": "20260806",
+            "value": 0.7343152792020136
+          },
+          {
+            "change_rate": 0.01627452458265727,
+            "date_time": "20260807",
+            "value": 0.7462659112648076
+          },
+          {
+            "change_rate": -0.0428994153449697,
+            "date_time": "20260808",
+            "value": 0.7142515399796663
+          },
+          {
+            "change_rate": -0.007013136459240619,
+            "date_time": "20260809",
+            "value": 0.7092423964635661
+          },
+          {
+            "change_rate": 0.0027221153719500743,
+            "date_time": "20260810",
+            "value": 0.7111730360934183
+          },
+          {
+            "change_rate": 0.042254650607919726,
+            "date_time": "20260811",
+            "value": 0.7412234042553192
+          },
+          {
+            "change_rate": 0.00763949793361221,
+            "date_time": "20260812",
+            "value": 0.7468859789204727
+          },
+          {
+            "change_rate": 0.0071036828946300515,
+            "date_time": "20260813",
+            "value": 0.7521916200731691
+          },
+          {
+            "change_rate": -0.07574327033583707,
+            "date_time": "20260814",
+            "value": 0.6952181668496158
+          },
+          {
+            "change_rate": 0.13477362813726723,
+            "date_time": "20260815",
+            "value": 0.7889152415428785
+          },
+          {
+            "change_rate": -0.16549813619353596,
+            "date_time": "20260816",
+            "value": 0.6583512394528589
+          },
+          {
+            "change_rate": 0.08141838592013252,
+            "date_time": "20260817",
+            "value": 0.7119531347376293
+          },
+          {
+            "change_rate": 0.0711609451229623,
+            "date_time": "20260818",
+            "value": 0.7626163926888148
+          },
+          {
+            "change_rate": -0.08038338144500486,
+            "date_time": "20260819",
+            "value": 0.7013147082990961
+          },
+          {
+            "change_rate": 0.10512625547499128,
+            "date_time": "20260820",
+            "value": 0.7750412974921159
+          }
+        ]
+      },
+      {
+        "english_metric_name": "bounce_rate_2s",
+        "metric_name": "2秒跳出率",
+        "metric_value": 0.3530428448855885,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "value": 0.3443036185450433
+          },
+          {
+            "change_rate": -6.853189363643601e-05,
+            "date_time": "20260723",
+            "value": 0.34428002276607855
+          },
+          {
+            "change_rate": 0.019690769818058045,
+            "date_time": "20260724",
+            "value": 0.3510591614473212
+          },
+          {
+            "change_rate": 0.005784538595616595,
+            "date_time": "20260725",
+            "value": 0.353089876716058
+          },
+          {
+            "change_rate": 0.03558047022078079,
+            "date_time": "20260726",
+            "value": 0.3656529805598129
+          },
+          {
+            "change_rate": -0.07803056136541163,
+            "date_time": "20260727",
+            "value": 0.33712087322179474
+          },
+          {
+            "change_rate": -0.13207812588120083,
+            "date_time": "20260728",
+            "value": 0.2925945800912262
+          },
+          {
+            "change_rate": 0.04066002035223722,
+            "date_time": "20260729",
+            "value": 0.30449148167268975
+          },
+          {
+            "change_rate": 0.07016918480596128,
+            "date_time": "20260730",
+            "value": 0.3258574007220217
+          },
+          {
+            "change_rate": 0.05807387406941439,
+            "date_time": "20260731",
+            "value": 0.3447812023761391
+          },
+          {
+            "change_rate": -0.016718401668281372,
+            "date_time": "20260801",
+            "value": 0.33901701174714177
+          },
+          {
+            "change_rate": 0.050104663812777915,
+            "date_time": "20260802",
+            "value": 0.3560033451475449
+          },
+          {
+            "change_rate": 0.0563425709325263,
+            "date_time": "20260803",
+            "value": 0.3760614888737371
+          },
+          {
+            "change_rate": -0.11871759013929639,
+            "date_time": "20260804",
+            "value": 0.3314163751704512
+          },
+          {
+            "change_rate": 0.13582629736856786,
+            "date_time": "20260805",
+            "value": 0.37643143429716575
+          },
+          {
+            "change_rate": -0.024512255090654224,
+            "date_time": "20260806",
+            "value": 0.3672042509555328
+          },
+          {
+            "change_rate": -0.05326729335883623,
+            "date_time": "20260807",
+            "value": 0.3476442743972727
+          },
+          {
+            "change_rate": -5.044685230238502e-05,
+            "date_time": "20260808",
+            "value": 0.3476267368379084
+          },
+          {
+            "change_rate": 0.04238886602672336,
+            "date_time": "20260809",
+            "value": 0.3623622400130375
+          },
+          {
+            "change_rate": 0.017298527669838328,
+            "date_time": "20260810",
+            "value": 0.36863057324840764
+          },
+          {
+            "change_rate": -0.013263789960632927,
+            "date_time": "20260811",
+            "value": 0.36374113475177305
+          },
+          {
+            "change_rate": -0.06969474081369917,
+            "date_time": "20260812",
+            "value": 0.3383902906419674
+          },
+          {
+            "change_rate": 0.017897838334692925,
+            "date_time": "20260813",
+            "value": 0.3444467453579071
+          },
+          {
+            "change_rate": 0.2721445772994947,
+            "date_time": "20260814",
+            "value": 0.4381860592755214
+          },
+          {
+            "change_rate": -0.16645503305039497,
+            "date_time": "20260815",
+            "value": 0.36524778429659216
+          },
+          {
+            "change_rate": 0.028655278036723974,
+            "date_time": "20260816",
+            "value": 0.3757140611079084
+          },
+          {
+            "change_rate": 0.07950164270886213,
+            "date_time": "20260817",
+            "value": 0.4055839461548049
+          },
+          {
+            "change_rate": -0.1261770687246688,
+            "date_time": "20260818",
+            "value": 0.3544085527072077
+          },
+          {
+            "change_rate": 0.0879514345773507,
+            "date_time": "20260819",
+            "value": 0.38557929334428925
+          },
+          {
+            "change_rate": -0.011907166870030563,
+            "date_time": "20260820",
+            "value": 0.38098813635681034
+          }
+        ]
+      },
+      {
+        "english_metric_name": "avg_view_second",
+        "metric_name": "平均播放时长",
+        "metric_value": 93.40953151073334,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "value": 140.57486807387863
+          },
+          {
+            "change_rate": -0.1256813546120924,
+            "date_time": "20260723",
+            "value": 122.90722822993739
+          },
+          {
+            "change_rate": 0.1277501805007544,
+            "date_time": "20260724",
+            "value": 138.6086488211593
+          },
+          {
+            "change_rate": -0.005547963521278559,
+            "date_time": "20260725",
+            "value": 137.8396530937658
+          },
+          {
+            "change_rate": 0.1835470240880564,
+            "date_time": "20260726",
+            "value": 163.13971122045658
+          },
+          {
+            "change_rate": -0.26613590637839557,
+            "date_time": "20260727",
+            "value": 119.72237630849065
+          },
+          {
+            "change_rate": 0.057463915599565464,
+            "date_time": "20260728",
+            "value": 126.60209283606117
+          },
+          {
+            "change_rate": -0.16627306677641604,
+            "date_time": "20260729",
+            "value": 105.55157459989675
+          },
+          {
+            "change_rate": -0.14450089143030487,
+            "date_time": "20260730",
+            "value": 90.29927797833935
+          },
+          {
+            "change_rate": -0.0546525916615456,
+            "date_time": "20260731",
+            "value": 85.36418841165677
+          },
+          {
+            "change_rate": 0.1778648815066617,
+            "date_time": "20260801",
+            "value": 100.54747966840844
+          },
+          {
+            "change_rate": -0.22417056999726145,
+            "date_time": "20260802",
+            "value": 78.00769383935327
+          },
+          {
+            "change_rate": -0.314662467058859,
+            "date_time": "20260803",
+            "value": 53.46160044629021
+          },
+          {
+            "change_rate": -0.39823794355791736,
+            "date_time": "20260804",
+            "value": 32.17116262524456
+          },
+          {
+            "change_rate": 0.9990089591208531,
+            "date_time": "20260805",
+            "value": 64.31044231319783
+          },
+          {
+            "change_rate": 0.2634206678673625,
+            "date_time": "20260806",
+            "value": 81.25114197818588
+          },
+          {
+            "change_rate": -0.14916594244845188,
+            "date_time": "20260807",
+            "value": 69.13123880999682
+          },
+          {
+            "change_rate": 0.26708967244259757,
+            "date_time": "20260808",
+            "value": 87.59547873930985
+          },
+          {
+            "change_rate": 0.057535817179182484,
+            "date_time": "20260809",
+            "value": 92.63535618977775
+          },
+          {
+            "change_rate": -0.08874407723761642,
+            "date_time": "20260810",
+            "value": 84.41451698513801
+          },
+          {
+            "change_rate": 0.13249245041964122,
+            "date_time": "20260811",
+            "value": 95.59880319148937
+          },
+          {
+            "change_rate": -0.03703736773819402,
+            "date_time": "20260812",
+            "value": 92.05807516235494
+          },
+          {
+            "change_rate": 0.06424921445165509,
+            "date_time": "20260813",
+            "value": 97.97273417546766
+          },
+          {
+            "change_rate": -0.16205663697195644,
+            "date_time": "20260814",
+            "value": 82.09560236004391
+          },
+          {
+            "change_rate": 0.9520491384376957,
+            "date_time": "20260815",
+            "value": 160.25464985644737
+          },
+          {
+            "change_rate": -0.46250873121572,
+            "date_time": "20260816",
+            "value": 86.13547507992243
+          },
+          {
+            "change_rate": 0.3537700693135339,
+            "date_time": "20260817",
+            "value": 116.60762806930076
+          },
+          {
+            "change_rate": -0.16889576553755017,
+            "date_time": "20260818",
+            "value": 96.91309345901828
+          },
+          {
+            "change_rate": -0.09596234802794262,
+            "date_time": "20260819",
+            "value": 87.61308545603944
+          },
+          {
+            "change_rate": 0.2583141082736975,
+            "date_time": "20260820",
+            "value": 110.24478149872353
+          }
+        ]
+      },
+      {
+        "english_metric_name": "total_fans_cnt",
+        "metric_name": "总粉丝量",
+        "metric_value": 14300,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "value": 1144
+          },
+          {
+            "change_rate": 0.13898601398601398,
+            "date_time": "20260723",
+            "value": 1303
+          },
+          {
+            "change_rate": 0.13200306983883345,
+            "date_time": "20260724",
+            "value": 1475
+          },
+          {
+            "change_rate": 0.15593220338983052,
+            "date_time": "20260725",
+            "value": 1705
+          },
+          {
+            "change_rate": 0.0967741935483871,
+            "date_time": "20260726",
+            "value": 1870
+          },
+          {
+            "change_rate": 0.08181818181818182,
+            "date_time": "20260727",
+            "value": 2023
+          },
+          {
+            "change_rate": 0.08699950568462679,
+            "date_time": "20260728",
+            "value": 2199
+          },
+          {
+            "change_rate": 0.03228740336516599,
+            "date_time": "20260729",
+            "value": 2270
+          },
+          {
+            "change_rate": 0.10352422907488987,
+            "date_time": "20260730",
+            "value": 2505
+          },
+          {
+            "change_rate": 0.4343313373253493,
+            "date_time": "20260731",
+            "value": 3593
+          },
+          {
+            "change_rate": 0.2858335652657946,
+            "date_time": "20260801",
+            "value": 4620
+          },
+          {
+            "change_rate": 0.23333333333333334,
+            "date_time": "20260802",
+            "value": 5698
+          },
+          {
+            "change_rate": 0.012109512109512109,
+            "date_time": "20260803",
+            "value": 5767
+          },
+          {
+            "change_rate": 0.01872724119993064,
+            "date_time": "20260804",
+            "value": 5875
+          },
+          {
+            "change_rate": 0.06570212765957446,
+            "date_time": "20260805",
+            "value": 6261
+          },
+          {
+            "change_rate": 0.06085289889793963,
+            "date_time": "20260806",
+            "value": 6642
+          },
+          {
+            "change_rate": 0.12767238783498946,
+            "date_time": "20260807",
+            "value": 7490
+          },
+          {
+            "change_rate": 0.09986648865153538,
+            "date_time": "20260808",
+            "value": 8238
+          },
+          {
+            "change_rate": 0.12454479242534595,
+            "date_time": "20260809",
+            "value": 9264
+          },
+          {
+            "change_rate": 0.05062607944732297,
+            "date_time": "20260810",
+            "value": 9733
+          },
+          {
+            "change_rate": 0.04150827083119285,
+            "date_time": "20260811",
+            "value": 10137
+          },
+          {
+            "change_rate": 0.05228371313011739,
+            "date_time": "20260812",
+            "value": 10667
+          },
+          {
+            "change_rate": 0.0362801162463673,
+            "date_time": "20260813",
+            "value": 11054
+          },
+          {
+            "change_rate": 0.07942826126289126,
+            "date_time": "20260814",
+            "value": 11932
+          },
+          {
+            "change_rate": 0.05447536037546095,
+            "date_time": "20260815",
+            "value": 12582
+          },
+          {
+            "change_rate": 0.06556986170720076,
+            "date_time": "20260816",
+            "value": 13407
+          },
+          {
+            "change_rate": 0.023047661669277242,
+            "date_time": "20260817",
+            "value": 13716
+          },
+          {
+            "change_rate": 0.012831729367162438,
+            "date_time": "20260818",
+            "value": 13892
+          },
+          {
+            "change_rate": 0.013317016988194645,
+            "date_time": "20260819",
+            "value": 14077
+          },
+          {
+            "change_rate": 0.01584144348937984,
+            "date_time": "20260820",
+            "value": 14300
+          }
+        ]
+      }
+    ],
+    "status_code": 0,
+    "status_msg": ""
+  },
+  "fans": {
+    "metrics": [
+      {
+        "english_metric_name": "net_fans_cnt",
+        "metric_name": "净增粉丝",
+        "metric_value": 13328,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "value": 172
+          },
+          {
+            "change_rate": -0.0755813953488372,
+            "date_time": "20260723",
+            "value": 159
+          },
+          {
+            "change_rate": 0.08176100628930817,
+            "date_time": "20260724",
+            "value": 172
+          },
+          {
+            "change_rate": 0.3372093023255814,
+            "date_time": "20260725",
+            "value": 230
+          },
+          {
+            "change_rate": -0.2826086956521739,
+            "date_time": "20260726",
+            "value": 165
+          },
+          {
+            "change_rate": -0.07272727272727272,
+            "date_time": "20260727",
+            "value": 153
+          },
+          {
+            "change_rate": 0.1503267973856209,
+            "date_time": "20260728",
+            "value": 176
+          },
+          {
+            "change_rate": -0.5965909090909091,
+            "date_time": "20260729",
+            "value": 71
+          },
+          {
+            "change_rate": 2.3098591549295775,
+            "date_time": "20260730",
+            "value": 235
+          },
+          {
+            "change_rate": 3.629787234042553,
+            "date_time": "20260731",
+            "value": 1088
+          },
+          {
+            "change_rate": -0.05606617647058824,
+            "date_time": "20260801",
+            "value": 1027
+          },
+          {
+            "change_rate": 0.04965920155793573,
+            "date_time": "20260802",
+            "value": 1078
+          },
+          {
+            "change_rate": -0.9359925788497218,
+            "date_time": "20260803",
+            "value": 69
+          },
+          {
+            "change_rate": 0.5652173913043478,
+            "date_time": "20260804",
+            "value": 108
+          },
+          {
+            "change_rate": 2.574074074074074,
+            "date_time": "20260805",
+            "value": 386
+          },
+          {
+            "change_rate": -0.012953367875647668,
+            "date_time": "20260806",
+            "value": 381
+          },
+          {
+            "change_rate": 1.2257217847769029,
+            "date_time": "20260807",
+            "value": 848
+          },
+          {
+            "change_rate": -0.1179245283018868,
+            "date_time": "20260808",
+            "value": 748
+          },
+          {
+            "change_rate": 0.3716577540106952,
+            "date_time": "20260809",
+            "value": 1026
+          },
+          {
+            "change_rate": -0.5428849902534113,
+            "date_time": "20260810",
+            "value": 469
+          },
+          {
+            "change_rate": -0.13859275053304904,
+            "date_time": "20260811",
+            "value": 404
+          },
+          {
+            "change_rate": 0.3118811881188119,
+            "date_time": "20260812",
+            "value": 530
+          },
+          {
+            "change_rate": -0.269811320754717,
+            "date_time": "20260813",
+            "value": 387
+          },
+          {
+            "change_rate": 1.268733850129199,
+            "date_time": "20260814",
+            "value": 878
+          },
+          {
+            "change_rate": -0.25968109339407747,
+            "date_time": "20260815",
+            "value": 650
+          },
+          {
+            "change_rate": 0.2692307692307692,
+            "date_time": "20260816",
+            "value": 825
+          },
+          {
+            "change_rate": -0.6254545454545455,
+            "date_time": "20260817",
+            "value": 309
+          },
+          {
+            "change_rate": -0.43042071197411,
+            "date_time": "20260818",
+            "value": 176
+          },
+          {
+            "change_rate": 0.05113636363636364,
+            "date_time": "20260819",
+            "value": 185
+          },
+          {
+            "change_rate": 0.20540540540540542,
+            "date_time": "20260820",
+            "value": 223
+          }
+        ]
+      },
+      {
+        "english_metric_name": "cancel_fans_cnt",
+        "metric_name": "取关粉丝",
+        "metric_value": 437,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "value": 4
+          },
+          {
+            "change_rate": 1,
+            "date_time": "20260723",
+            "value": 8
+          },
+          {
+            "change_rate": -0.75,
+            "date_time": "20260724",
+            "value": 2
+          },
+          {
+            "change_rate": 1,
+            "date_time": "20260725",
+            "value": 4
+          },
+          {
+            "change_rate": 1.5,
+            "date_time": "20260726",
+            "value": 10
+          },
+          {
+            "change_rate": -0.5,
+            "date_time": "20260727",
+            "value": 5
+          },
+          {
+            "change_rate": 0.6,
+            "date_time": "20260728",
+            "value": 8
+          },
+          {
+            "change_rate": -0.5,
+            "date_time": "20260729",
+            "value": 4
+          },
+          {
+            "change_rate": 0.75,
+            "date_time": "20260730",
+            "value": 7
+          },
+          {
+            "change_rate": 1.4285714285714286,
+            "date_time": "20260731",
+            "value": 17
+          },
+          {
+            "change_rate": -0.5294117647058824,
+            "date_time": "20260801",
+            "value": 8
+          },
+          {
+            "change_rate": 1.875,
+            "date_time": "20260802",
+            "value": 23
+          },
+          {
+            "change_rate": -0.2608695652173913,
+            "date_time": "20260803",
+            "value": 17
+          },
+          {
+            "change_rate": -0.058823529411764705,
+            "date_time": "20260804",
+            "value": 16
+          },
+          {
+            "change_rate": -0.25,
+            "date_time": "20260805",
+            "value": 12
+          },
+          {
+            "change_rate": 0.4166666666666667,
+            "date_time": "20260806",
+            "value": 17
+          },
+          {
+            "change_rate": -0.11764705882352941,
+            "date_time": "20260807",
+            "value": 15
+          },
+          {
+            "change_rate": 0,
+            "date_time": "20260808",
+            "value": 15
+          },
+          {
+            "change_rate": 0.8,
+            "date_time": "20260809",
+            "value": 27
+          },
+          {
+            "change_rate": -0.48148148148148145,
+            "date_time": "20260810",
+            "value": 14
+          },
+          {
+            "change_rate": 0.21428571428571427,
+            "date_time": "20260811",
+            "value": 17
+          },
+          {
+            "change_rate": 0.35294117647058826,
+            "date_time": "20260812",
+            "value": 23
+          },
+          {
+            "change_rate": -0.17391304347826086,
+            "date_time": "20260813",
+            "value": 19
+          },
+          {
+            "change_rate": -0.05263157894736842,
+            "date_time": "20260814",
+            "value": 18
+          },
+          {
+            "change_rate": -0.05555555555555555,
+            "date_time": "20260815",
+            "value": 17
+          },
+          {
+            "change_rate": 1.3529411764705883,
+            "date_time": "20260816",
+            "value": 40
+          },
+          {
+            "change_rate": -0.45,
+            "date_time": "20260817",
+            "value": 22
+          },
+          {
+            "change_rate": -0.2727272727272727,
+            "date_time": "20260818",
+            "value": 16
+          },
+          {
+            "change_rate": 0.3125,
+            "date_time": "20260819",
+            "value": 21
+          },
+          {
+            "change_rate": -0.47619047619047616,
+            "date_time": "20260820",
+            "value": 11
+          }
+        ]
+      },
+      {
+        "english_metric_name": "home_view_fans_cnt",
+        "metric_name": "回访粉丝量",
+        "metric_value": 4223,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "value": 58
+          },
+          {
+            "change_rate": -0.20689655172413793,
+            "date_time": "20260723",
+            "value": 46
+          },
+          {
+            "change_rate": -0.15217391304347827,
+            "date_time": "20260724",
+            "value": 39
+          },
+          {
+            "change_rate": 0.4358974358974359,
+            "date_time": "20260725",
+            "value": 56
+          },
+          {
+            "change_rate": -0.23214285714285715,
+            "date_time": "20260726",
+            "value": 43
+          },
+          {
+            "change_rate": 0.6046511627906976,
+            "date_time": "20260727",
+            "value": 69
+          },
+          {
+            "change_rate": 0.37681159420289856,
+            "date_time": "20260728",
+            "value": 95
+          },
+          {
+            "change_rate": -0.6210526315789474,
+            "date_time": "20260729",
+            "value": 36
+          },
+          {
+            "change_rate": 2.5277777777777777,
+            "date_time": "20260730",
+            "value": 127
+          },
+          {
+            "change_rate": 3.559055118110236,
+            "date_time": "20260731",
+            "value": 579
+          },
+          {
+            "change_rate": -0.010362694300518135,
+            "date_time": "20260801",
+            "value": 573
+          },
+          {
+            "change_rate": 0.16753926701570682,
+            "date_time": "20260802",
+            "value": 669
+          },
+          {
+            "change_rate": -0.7668161434977578,
+            "date_time": "20260803",
+            "value": 156
+          },
+          {
+            "change_rate": 0.14743589743589744,
+            "date_time": "20260804",
+            "value": 179
+          },
+          {
+            "change_rate": 0.2011173184357542,
+            "date_time": "20260805",
+            "value": 215
+          },
+          {
+            "change_rate": -0.4511627906976744,
+            "date_time": "20260806",
+            "value": 118
+          },
+          {
+            "change_rate": 2.152542372881356,
+            "date_time": "20260807",
+            "value": 372
+          },
+          {
+            "change_rate": -0.3118279569892473,
+            "date_time": "20260808",
+            "value": 256
+          },
+          {
+            "change_rate": 0.6640625,
+            "date_time": "20260809",
+            "value": 426
+          },
+          {
+            "change_rate": -0.3685446009389671,
+            "date_time": "20260810",
+            "value": 269
+          },
+          {
+            "change_rate": -0.24535315985130113,
+            "date_time": "20260811",
+            "value": 203
+          },
+          {
+            "change_rate": -0.2857142857142857,
+            "date_time": "20260812",
+            "value": 145
+          },
+          {
+            "change_rate": -0.07586206896551724,
+            "date_time": "20260813",
+            "value": 134
+          },
+          {
+            "change_rate": 1.164179104477612,
+            "date_time": "20260814",
+            "value": 290
+          },
+          {
+            "change_rate": -0.6379310344827587,
+            "date_time": "20260815",
+            "value": 105
+          },
+          {
+            "change_rate": 0.580952380952381,
+            "date_time": "20260816",
+            "value": 166
+          },
+          {
+            "change_rate": -0.3132530120481928,
+            "date_time": "20260817",
+            "value": 114
+          },
+          {
+            "change_rate": -0.19298245614035087,
+            "date_time": "20260818",
+            "value": 92
+          },
+          {
+            "change_rate": 0.5,
+            "date_time": "20260819",
+            "value": 138
+          },
+          {
+            "change_rate": -0.09420289855072464,
+            "date_time": "20260820",
+            "value": 125
+          }
+        ]
+      },
+      {
+        "english_metric_name": "total_fans_cnt",
+        "metric_name": "总粉丝量",
+        "metric_value": 14300,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "value": 1144
+          },
+          {
+            "change_rate": 0.13898601398601398,
+            "date_time": "20260723",
+            "value": 1303
+          },
+          {
+            "change_rate": 0.13200306983883345,
+            "date_time": "20260724",
+            "value": 1475
+          },
+          {
+            "change_rate": 0.15593220338983052,
+            "date_time": "20260725",
+            "value": 1705
+          },
+          {
+            "change_rate": 0.0967741935483871,
+            "date_time": "20260726",
+            "value": 1870
+          },
+          {
+            "change_rate": 0.08181818181818182,
+            "date_time": "20260727",
+            "value": 2023
+          },
+          {
+            "change_rate": 0.08699950568462679,
+            "date_time": "20260728",
+            "value": 2199
+          },
+          {
+            "change_rate": 0.03228740336516599,
+            "date_time": "20260729",
+            "value": 2270
+          },
+          {
+            "change_rate": 0.10352422907488987,
+            "date_time": "20260730",
+            "value": 2505
+          },
+          {
+            "change_rate": 0.4343313373253493,
+            "date_time": "20260731",
+            "value": 3593
+          },
+          {
+            "change_rate": 0.2858335652657946,
+            "date_time": "20260801",
+            "value": 4620
+          },
+          {
+            "change_rate": 0.23333333333333334,
+            "date_time": "20260802",
+            "value": 5698
+          },
+          {
+            "change_rate": 0.012109512109512109,
+            "date_time": "20260803",
+            "value": 5767
+          },
+          {
+            "change_rate": 0.01872724119993064,
+            "date_time": "20260804",
+            "value": 5875
+          },
+          {
+            "change_rate": 0.06570212765957446,
+            "date_time": "20260805",
+            "value": 6261
+          },
+          {
+            "change_rate": 0.06085289889793963,
+            "date_time": "20260806",
+            "value": 6642
+          },
+          {
+            "change_rate": 0.12767238783498946,
+            "date_time": "20260807",
+            "value": 7490
+          },
+          {
+            "change_rate": 0.09986648865153538,
+            "date_time": "20260808",
+            "value": 8238
+          },
+          {
+            "change_rate": 0.12454479242534595,
+            "date_time": "20260809",
+            "value": 9264
+          },
+          {
+            "change_rate": 0.05062607944732297,
+            "date_time": "20260810",
+            "value": 9733
+          },
+          {
+            "change_rate": 0.04150827083119285,
+            "date_time": "20260811",
+            "value": 10137
+          },
+          {
+            "change_rate": 0.05228371313011739,
+            "date_time": "20260812",
+            "value": 10667
+          },
+          {
+            "change_rate": 0.0362801162463673,
+            "date_time": "20260813",
+            "value": 11054
+          },
+          {
+            "change_rate": 0.07942826126289126,
+            "date_time": "20260814",
+            "value": 11932
+          },
+          {
+            "change_rate": 0.05447536037546095,
+            "date_time": "20260815",
+            "value": 12582
+          },
+          {
+            "change_rate": 0.06556986170720076,
+            "date_time": "20260816",
+            "value": 13407
+          },
+          {
+            "change_rate": 0.023047661669277242,
+            "date_time": "20260817",
+            "value": 13716
+          },
+          {
+            "change_rate": 0.012831729367162438,
+            "date_time": "20260818",
+            "value": 13892
+          },
+          {
+            "change_rate": 0.013317016988194645,
+            "date_time": "20260819",
+            "value": 14077
+          },
+          {
+            "change_rate": 0.01584144348937984,
+            "date_time": "20260820",
+            "value": 14300
+          }
+        ]
+      },
+      {
+        "english_metric_name": "new_fans_cnt",
+        "metric_name": "新增粉丝量",
+        "metric_value": 13765,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "value": 176
+          },
+          {
+            "change_rate": -0.05113636363636364,
+            "date_time": "20260723",
+            "value": 167
+          },
+          {
+            "change_rate": 0.041916167664670656,
+            "date_time": "20260724",
+            "value": 174
+          },
+          {
+            "change_rate": 0.3448275862068966,
+            "date_time": "20260725",
+            "value": 234
+          },
+          {
+            "change_rate": -0.25213675213675213,
+            "date_time": "20260726",
+            "value": 175
+          },
+          {
+            "change_rate": -0.09714285714285714,
+            "date_time": "20260727",
+            "value": 158
+          },
+          {
+            "change_rate": 0.16455696202531644,
+            "date_time": "20260728",
+            "value": 184
+          },
+          {
+            "change_rate": -0.592391304347826,
+            "date_time": "20260729",
+            "value": 75
+          },
+          {
+            "change_rate": 2.2266666666666666,
+            "date_time": "20260730",
+            "value": 242
+          },
+          {
+            "change_rate": 3.5661157024793386,
+            "date_time": "20260731",
+            "value": 1105
+          },
+          {
+            "change_rate": -0.06334841628959276,
+            "date_time": "20260801",
+            "value": 1035
+          },
+          {
+            "change_rate": 0.06376811594202898,
+            "date_time": "20260802",
+            "value": 1101
+          },
+          {
+            "change_rate": -0.92188919164396,
+            "date_time": "20260803",
+            "value": 86
+          },
+          {
+            "change_rate": 0.4418604651162791,
+            "date_time": "20260804",
+            "value": 124
+          },
+          {
+            "change_rate": 2.2096774193548385,
+            "date_time": "20260805",
+            "value": 398
+          },
+          {
+            "change_rate": 0,
+            "date_time": "20260806",
+            "value": 398
+          },
+          {
+            "change_rate": 1.1683417085427135,
+            "date_time": "20260807",
+            "value": 863
+          },
+          {
+            "change_rate": -0.11587485515643106,
+            "date_time": "20260808",
+            "value": 763
+          },
+          {
+            "change_rate": 0.3800786369593709,
+            "date_time": "20260809",
+            "value": 1053
+          },
+          {
+            "change_rate": -0.5413105413105413,
+            "date_time": "20260810",
+            "value": 483
+          },
+          {
+            "change_rate": -0.12836438923395446,
+            "date_time": "20260811",
+            "value": 421
+          },
+          {
+            "change_rate": 0.31353919239904987,
+            "date_time": "20260812",
+            "value": 553
+          },
+          {
+            "change_rate": -0.26582278481012656,
+            "date_time": "20260813",
+            "value": 406
+          },
+          {
+            "change_rate": 1.206896551724138,
+            "date_time": "20260814",
+            "value": 896
+          },
+          {
+            "change_rate": -0.25558035714285715,
+            "date_time": "20260815",
+            "value": 667
+          },
+          {
+            "change_rate": 0.29685157421289354,
+            "date_time": "20260816",
+            "value": 865
+          },
+          {
+            "change_rate": -0.6173410404624278,
+            "date_time": "20260817",
+            "value": 331
+          },
+          {
+            "change_rate": -0.4199395770392749,
+            "date_time": "20260818",
+            "value": 192
+          },
+          {
+            "change_rate": 0.07291666666666667,
+            "date_time": "20260819",
+            "value": 206
+          },
+          {
+            "change_rate": 0.13592233009708737,
+            "date_time": "20260820",
+            "value": 234
+          }
+        ]
+      },
+      {
+        "english_metric_name": "homepage_view_cnt",
+        "metric_name": "主页访问",
+        "metric_value": 22154,
+        "trends": [
+          {
+            "date_time": "20260722",
+            "value": 513
+          },
+          {
+            "change_rate": -0.2300194931773879,
+            "date_time": "20260723",
+            "value": 395
+          },
+          {
+            "change_rate": 0.005063291139240506,
+            "date_time": "20260724",
+            "value": 397
+          },
+          {
+            "change_rate": 0.09319899244332494,
+            "date_time": "20260725",
+            "value": 434
+          },
+          {
+            "change_rate": -0.42626728110599077,
+            "date_time": "20260726",
+            "value": 249
+          },
+          {
+            "change_rate": -0.04417670682730924,
+            "date_time": "20260727",
+            "value": 238
+          },
+          {
+            "change_rate": 0.9789915966386554,
+            "date_time": "20260728",
+            "value": 471
+          },
+          {
+            "change_rate": -0.4394904458598726,
+            "date_time": "20260729",
+            "value": 264
+          },
+          {
+            "change_rate": 1.3901515151515151,
+            "date_time": "20260730",
+            "value": 631
+          },
+          {
+            "change_rate": 3.6180665610142633,
+            "date_time": "20260731",
+            "value": 2914
+          },
+          {
+            "change_rate": -0.2076183939601922,
+            "date_time": "20260801",
+            "value": 2309
+          },
+          {
+            "change_rate": 0.22607189259419663,
+            "date_time": "20260802",
+            "value": 2831
+          },
+          {
+            "change_rate": -0.8428117273048393,
+            "date_time": "20260803",
+            "value": 445
+          },
+          {
+            "change_rate": 0.14157303370786517,
+            "date_time": "20260804",
+            "value": 508
+          },
+          {
+            "change_rate": 0.2559055118110236,
+            "date_time": "20260805",
+            "value": 638
+          },
+          {
+            "change_rate": -0.48119122257053293,
+            "date_time": "20260806",
+            "value": 331
+          },
+          {
+            "change_rate": 3.2447129909365557,
+            "date_time": "20260807",
+            "value": 1405
+          },
+          {
+            "change_rate": -0.2875444839857651,
+            "date_time": "20260808",
+            "value": 1001
+          },
+          {
+            "change_rate": 0.38161838161838163,
+            "date_time": "20260809",
+            "value": 1383
+          },
+          {
+            "change_rate": -0.4121475054229935,
+            "date_time": "20260810",
+            "value": 813
+          },
+          {
+            "change_rate": -0.33210332103321033,
+            "date_time": "20260811",
+            "value": 543
+          },
+          {
+            "change_rate": -0.20994475138121546,
+            "date_time": "20260812",
+            "value": 429
+          },
+          {
+            "change_rate": -0.1282051282051282,
+            "date_time": "20260813",
+            "value": 374
+          },
+          {
+            "change_rate": 1.4385026737967914,
+            "date_time": "20260814",
+            "value": 912
+          },
+          {
+            "change_rate": -0.6842105263157895,
+            "date_time": "20260815",
+            "value": 288
+          },
+          {
+            "change_rate": 0.4965277777777778,
+            "date_time": "20260816",
+            "value": 431
+          },
+          {
+            "change_rate": -0.419953596287703,
+            "date_time": "20260817",
+            "value": 250
+          },
+          {
+            "change_rate": -0.104,
+            "date_time": "20260818",
+            "value": 224
+          },
+          {
+            "change_rate": 0.3125,
+            "date_time": "20260819",
+            "value": 294
+          },
+          {
+            "change_rate": -0.1870748299319728,
+            "date_time": "20260820",
+            "value": 239
+          }
+        ]
+      }
+    ],
+    "status_code": 0,
+    "status_msg": ""
+  }
+}
