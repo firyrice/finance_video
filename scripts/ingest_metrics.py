@@ -149,7 +149,9 @@ def main():
         level = "video"
         title = args.video
         out_dir = os.path.join(WORKSPACE, args.video)
-        out_md = os.path.join(out_dir, "数据.md")
+        data_dir = os.path.join(out_dir, "数据")
+        os.makedirs(data_dir, exist_ok=True)
+        out_md = os.path.join(data_dir, "抖音_数据.md")
 
     md = build_markdown(title, args.xlsx, level)
 

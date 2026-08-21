@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-B站创作者后台「稿件数据」自动抓取 → 落盘到视频工作目录的《数据_B站.md》。
+B站创作者后台「稿件数据」自动抓取 → 落盘到视频工作目录的《数据/B站_数据.md》。
 
 原理（区别于抖音）：
     B站创作者后台的数据接口是**普通 cookie 鉴权的 JSON 接口**，不带 a_bogus/msToken
@@ -267,7 +267,7 @@ def build_markdown(video_title, data):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="B站创作者后台稿件数据 → 视频目录《数据_B站.md》")
+    ap = argparse.ArgumentParser(description="B站创作者后台稿件数据 → 视频目录《数据/B站_数据.md》")
     ap.add_argument("--url", required=True, help="稿件数据页 URL（含 BV 号）")
     ap.add_argument("--video", help="视频目录名（workspace 下文件夹名，通常含日期前缀）")
     ap.add_argument("--dry-run", action="store_true", help="只打印结果，不落盘")
@@ -291,7 +291,9 @@ def main():
         sys.stderr.write(f"目录不存在：{out_dir}\n（请确认 --video 与 workspace 下文件夹名完全一致）\n")
         sys.exit(1)
 
-    out_md = os.path.join(out_dir, "数据_B站.md")
+    data_dir = os.path.join(out_dir, "数据")
+    os.makedirs(data_dir, exist_ok=True)
+    out_md = os.path.join(data_dir, "B站_数据.md")
     with open(out_md, "w", encoding="utf-8") as f:
         f.write(md)
     print(f"已写入：{out_md}")

@@ -28,9 +28,11 @@ cookie：
     pip install playwright   （复用 ms-playwright 的 Chromium 内核）
 """
 import argparse
+import difflib
 import glob
 import json
 import os
+import re
 import sys
 from datetime import datetime, timedelta
 from http.cookies import SimpleCookie
@@ -39,7 +41,8 @@ from playwright.sync_api import sync_playwright
 
 SKILL_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 COOKIE_FILE = os.path.join(SKILL_DIR, ".channels_cookie")
-ACCOUNT_DIR = os.path.join(SKILL_DIR, "workspace", "账号数据")
+WORKSPACE = os.path.join(SKILL_DIR, "workspace")
+ACCOUNT_DIR = os.path.join(WORKSPACE, "账号数据")
 OUT_MD = os.path.join(ACCOUNT_DIR, "视频号.md")
 
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
@@ -261,8 +264,63 @@ def build_markdown(data):
     return "".join(out)
 
 
+def match_video(videos, query):
+    """按视频文件夹名（去掉日期前缀的股票名/标题）在 post_list 里匹配对应视频。
+
+    先取文件夹名 `YYYY-MM-DD_标题` 里 `_` 之后的部分（通常是股票名），
+    优先子串命中 desc，命中多条时取播放最高；无子串命中则用 difflib 取最相似。
+    """
+    key = re.sub(r"^\d{4}-\d{2}-\d{2}_", "", query).strip()
+    vs = list(videos.values())
+
+    def desc_of(v):
+        return ((v.get("desc") or {}).get("description") or "").replace("\n", " ")
+
+    # 1) 子串命中（股票名一般是 desc 开头，如「牧原股份，…」）
+    hits = [v for v in vs if key and key in desc_of(v)]
+    # 股票名带「股份/科技」等后缀时，也试裸词（牧原股份 → 牧原）
+    if not hits and len(key) > 2:
+        stem = re.sub(r"(股份|科技|集团|医疗|银行|证券|新耀|创新|康德|电子|生物|制药)$", "", key)
+        if stem and stem != key:
+            hits = [v for v in vs if stem in desc_of(v)]
+    if hits:
+        return max(hits, key=lambda v: int(v.get("readCount") or 0))
+
+    # 2) 模糊兜底
+    best, score = None, 0.0
+    for v in vs:
+        r = difflib.SequenceMatcher(None, key, desc_of(v)).ratio()
+        if r > score:
+            best, score = v, r
+    return best if score >= 0.3 else None
+
+
+def build_video_markdown(v, video_title):
+    """单条视频的稿件级《视频号_数据.md》。"""
+    stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
+    desc = ((v.get("desc") or {}).get("description") or "").strip()
+    ts = v.get("createTime")
+    pub = datetime.fromtimestamp(int(ts)).strftime("%Y-%m-%d %H:%M") if ts else "未知"
+
+    out = []
+    out.append(f"# 视频号数据 · {video_title}\n")
+    out.append(f"\n> 最近更新：{stamp}　｜　抓取脚本：scripts/channels_metrics.py（自动抓取，视频号助手后台）\n")
+    out.append(f"> objectId：{v.get('objectId')}　｜　发布时间：{pub}\n")
+    out.append(f"> 作品文案：{desc.replace(chr(10), ' ')}\n\n")
+
+    out.append("## 指标总览\n\n")
+    out.append("| 指标 | 数值 |\n| --- | --- |\n")
+    for key, label, typ in VIDEO_FIELDS:
+        out.append(f"| {label} | {fmt(v.get(key), typ)} |\n")
+    out.append("\n> 说明：完播率=完整看完占比，平均时长=人均观看秒数，快划率=开头快速划走占比（越低越好）。\n")
+    out.append("> 视频号后台单条视频不提供逐日趋势/流量来源细分，此表为该视频的累计口径。账号级分来源趋势见 `账号数据/视频号.md`。\n")
+    return "".join(out)
+
+
 def main():
-    ap = argparse.ArgumentParser(description="视频号后台数据 → workspace/账号数据/视频号.md")
+    ap = argparse.ArgumentParser(description="视频号后台数据 → 账号级 视频号.md 或 稿件级 视频号_数据.md")
+    ap.add_argument("--video", help="视频文件夹名（workspace 下，含日期前缀）；给了就落稿件级 视频号_数据.md，"
+                                    "不给则落账号级 账号数据/视频号.md")
     ap.add_argument("--show", action="store_true", help="显示浏览器窗口（调试）")
     ap.add_argument("--wait", type=int, default=12, help="每页加载后等待秒数（默认 12）")
     ap.add_argument("--dry-run", action="store_true", help="只打印结果，不落盘")
@@ -270,6 +328,43 @@ def main():
     args = ap.parse_args()
 
     data = scrape(headless=not args.show, wait=args.wait)
+
+    # 稿件级：从 post_list 里匹配指定视频，落进该视频文件夹的 视频号_数据.md
+    if args.video:
+        v = match_video(data["videos"], args.video)
+        if not v:
+            sys.stderr.write(f"未在 post_list 里匹配到「{args.video}」对应的视频。\n"
+                             f"已抓到 {len(data['videos'])} 条，确认该视频已在视频号发布、文件夹名含股票名。\n")
+            sys.exit(1)
+        matched_desc = ((v.get("desc") or {}).get("description") or "").split("\n")[0]
+        print(f"[channels] 匹配到视频：{matched_desc}（播放 {v.get('readCount')}）", file=sys.stderr)
+        md = build_video_markdown(v, args.video)
+
+        if args.dry_run:
+            sys.stdout.write(md)
+            return
+        out_dir = os.path.join(WORKSPACE, args.video)
+        if not os.path.isdir(out_dir):
+            sys.stderr.write(f"目录不存在：{out_dir}\n（请确认 --video 与 workspace 下文件夹名完全一致）\n")
+            sys.exit(1)
+        data_dir = os.path.join(out_dir, "数据")
+        os.makedirs(data_dir, exist_ok=True)
+        out_md = os.path.join(data_dir, "视频号_数据.md")
+        with open(out_md, "w", encoding="utf-8") as f:
+            f.write(md)
+        print(f"已写入：{out_md}")
+
+        if args.save_raw:
+            raw_dir = os.path.join(out_dir, "raw")
+            os.makedirs(raw_dir, exist_ok=True)
+            oid = (v.get("objectId") or "").split("/")[-1]
+            raw_path = os.path.join(raw_dir, f"channels_raw_{oid}.json")
+            with open(raw_path, "w", encoding="utf-8") as f:
+                json.dump(v, f, ensure_ascii=False, indent=2)
+            print(f"已归档原始 JSON：{raw_path}")
+        return
+
+    # 账号级：全部视频汇总
     md = build_markdown(data)
 
     if args.dry_run:

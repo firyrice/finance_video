@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-小红书创作者后台「笔记数据」自动抓取 → 落盘到视频工作目录的《小红书数据.md》。
+小红书创作者后台「笔记数据」自动抓取 → 落盘到视频工作目录的《数据/小红书_数据.md》。
 
 原理：
     note-detail 页是 SPA，数字全部来自登录态下的签名 XHR 接口（x-s/x-t 签名，纯
@@ -282,7 +282,7 @@ def build_markdown(video_title, data):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="小红书创作者后台笔记数据 → 视频目录《小红书数据.md》")
+    ap = argparse.ArgumentParser(description="小红书创作者后台笔记数据 → 视频目录《数据/小红书_数据.md》")
     ap.add_argument("--url", required=True, help="note-detail 页面 URL（含 noteId）")
     ap.add_argument("--video", help="视频目录名（workspace 下文件夹名，通常含日期前缀）")
     ap.add_argument("--show", action="store_true", help="显示浏览器窗口（调试）")
@@ -308,7 +308,9 @@ def main():
         sys.stderr.write(f"目录不存在：{out_dir}\n（请确认 --video 与 workspace 下文件夹名完全一致）\n")
         sys.exit(1)
 
-    out_md = os.path.join(out_dir, "小红书数据.md")
+    data_dir = os.path.join(out_dir, "数据")
+    os.makedirs(data_dir, exist_ok=True)
+    out_md = os.path.join(data_dir, "小红书_数据.md")
     with open(out_md, "w", encoding="utf-8") as f:
         f.write(md)
     print(f"已写入：{out_md}")
